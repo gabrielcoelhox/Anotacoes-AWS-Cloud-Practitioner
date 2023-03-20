@@ -10,10 +10,10 @@ Repositório destinado a anotações de estudo para a prova de certificação **
 ## <a id="id1">:page_facing_up: Introdução </a>
 Cloud Computing é a entrega sob demanda (On Demand) de recursos de computação, banco de dados, armazenamento, aplicações ou qualquer outro recurso de tecnologia que é entregue através de uma plataforma via internet, onde o pagamento é baseado no consumo (pay-as-you-go).
 
-![IMG](images/Fluxo01.jpg)
+![IMG](Images/Fluxo01.jpg)
 Fluxo On-Premises de uma empresa sem a utilização dos serviços Cloud.
 
-![IMG](images/Fluxo02.jpg)
+![IMG](Images/Fluxo02.jpg)
 Fluxo com Cloud Computing.
 
 ### Vantagens do uso de Cloud Computing
@@ -98,7 +98,7 @@ O objetivo é entender a diferença de cada plano de suporte e conseguir sugerir
 
 ## <a id="id2">Tipos de serviços Cloud
 
-![IMG](images/Servicos-Cloud.png)
+![IMG](Images/Servicos-Cloud.png)
 
 - **Infrastructure as a Service (IaaS)** - Serviços que fornecem conexão de rede, SOs, armazenamento, alta flexibilidade de utilização. Costumam ser genéricos, podem ser utilizados para vários fins. Ex: EC2.
 
