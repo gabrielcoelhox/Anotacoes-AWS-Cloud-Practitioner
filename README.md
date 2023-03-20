@@ -11,10 +11,10 @@ Repositório destinado a anotações de estudo para a prova de certificação **
 Cloud Computing é a entrega sob demanda (On Demand) de recursos de computação, banco de dados, armazenamento, aplicações ou qualquer outro recurso de tecnologia que é entregue através de uma plataforma via internet, onde o pagamento é baseado no consumo (pay-as-you-go).
 
 ![IMG](Images/Fluxo01.jpg)
-Fluxo On-Premises de uma empresa sem a utilização dos serviços Cloud.
+<br>Fluxo On-Premises de uma empresa sem a utilização dos serviços Cloud.
 
 ![IMG](Images/Fluxo02.jpg)
-Fluxo com Cloud Computing.
+<br>Fluxo com Cloud Computing.
 
 ### Vantagens do uso de Cloud Computing
 
