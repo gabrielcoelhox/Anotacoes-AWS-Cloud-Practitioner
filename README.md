@@ -1,5 +1,5 @@
 # <p align="center"> :cloud: AWS Cloud Practitioner :cloud: </p>
-<p align="center"> 💻 Atualizado em 20 de Março de 2023 💻</p>
+<p align="center"> 💻 Atualizado em 21 de Março de 2023 💻</p>
 
 Repositório destinado a anotações de estudo para a prova de certificação **AWS Cloud Practitioner (CLF-C01)**.
 
@@ -8,18 +8,18 @@ Repositório destinado a anotações de estudo para a prova de certificação **
 [Tipos de Serviços Cloud](#id2)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
 ## <a id="id1">:page_facing_up: Introdução </a>
-Cloud Computing é a entrega sob demanda (On Demand) de recursos de computação, banco de dados, armazenamento, aplicações ou qualquer outro recurso de tecnologia que é entregue através de uma plataforma via internet, onde o pagamento é baseado no consumo (pay-as-you-go).
+Cloud Computing é a entrega sob demanda (On Demand) de recursos de computação, banco de dados, armazenamento, aplicações ou qualquer outro recurso de tecnologia que é entregue através de uma plataforma via internet, onde o pagamento é baseado no consumo (pay-as-you-go). Em vez de comprar, ter e manter datacenters e servidores físicos, você pode acessar serviços de tecnologia, como capacidade computacional, armazenamento e bancos de dados, conforme a necessidade, usando um provedor de nuvem como a Amazon Web Services (AWS).
 
-![IMG](Images/Fluxo01.jpg)
-<br>Fluxo On-Premises de uma empresa sem a utilização dos serviços Cloud.
+![Fluxo01](Images/Fluxo01.jpg)
+<br>Fluxo de uma empresa sem a utilização dos serviços Cloud.
 
-![IMG](Images/Fluxo02.jpg)
+![Fluxo02](Images/Fluxo02.jpg)
 <br>Fluxo com Cloud Computing.
 
 ### Vantagens do uso de Cloud Computing
 
 1. **Você Troca CAPEX (Capital Expense) por OPEX (Operational Expense)** - Significa que você não se preocupa mais com o hardware, apenas com as questões operacionais da sua aplicação.
-2. **Benefícios de enormes economias de escala.** - Significa que seu gasto está totalmente adaptado ao seu consumo, não existe ociosidade, nem sobrecarregamento.
+2. **Economias de escala.** - Significa que seu gasto está totalmente adaptado ao seu consumo, não existe ociosidade, nem sobrecarregamento.
 3. **Pare de adivinhar sua capacidade** - Significa que com a cloud você pode utilizar de ferramentas e métricas para saber com mais exatidão qual será seu gasto com infra.
 4. **Aumente a sua velocidade e agilidade** - Significa que com a cloud você terá vários impedimentos a menos para ter um desenvolvimento mais ágil, com entregas mais curtas rápidas e contínuas.
 5. **Pare de gastar dinheiro rodando e mantendo data centers** - Agora quem mantém os datacenters é a AWS, você cuida apenas do contexto do seu negócio. Ao invés de investir em servidores, você paga apenas quando consumir um recurso e apenas pela quantidade que consumir.
@@ -98,10 +98,56 @@ O objetivo é entender a diferença de cada plano de suporte e conseguir sugerir
 
 ## <a id="id2">Tipos de serviços Cloud
 
-![IMG](Images/Servicos-Cloud.png)
+Os três principais tipos de computação em Nuvem são, infraestrutura como serviço (IaaS), plataforma como serviço (PaaS) e software como serviço (SaaS). Cada tipo de computação em Nuvem oferece diferentes níveis de controle, flexibilidade e gerenciamento para que você possa selecionar o conjunto certo de serviços para as suas necessidades.
+
+![Servicos-Cloud](Images/Servicos-Cloud.png)
 
 - **Infrastructure as a Service (IaaS)** - Serviços que fornecem conexão de rede, SOs, armazenamento, alta flexibilidade de utilização. Costumam ser genéricos, podem ser utilizados para vários fins. Ex: EC2.
 
-- **Platform as a Service (PaaS)** - O Datacenter é responsável pelos recursos físicos ou virtuais, softwares, alguns itens de segurança. São serviços que fornecem uma plataforma para deployment, restauração, manutenção de dados, mas não te dão acesso ao SO diretamente, Ex: Elastic BeanStalk, S3.
+- **Platform as a Service (PaaS)** - Você não precisa mais gerenciar a infraestrutura subjacente e pode manter o foco na implantação e no gerenciamento de aplicativos. Desta forma, o Datacenter é responsável pelos recursos físicos ou virtuais, softwares, manutenção e alguns itens de segurança. São serviços que fornecem uma plataforma para deployment, restauração, manutenção de dados, mas não te dão acesso ao SO diretamente, Ex: Elastic BeanStalk, S3.
 
-- **Software as a Service (SaaS)** - Disponibilizar softwares, entregar sistemas e aplicativos pela internet, armazenar e manipular dados. Uma plataforma de serviços SaaS dispensa a aquisição, instalação e manutenção de softwares e equipamentos, uma vez que tudo fica disponível online. Nesse modelo, o cliente não compra a licença de um produto, mas o direito de usufruir do serviço oferecido mediante pagamentos recorrentes. Ex: Netflix, Dropbox, Gmail, Spotify.
+- **Software as a Service (SaaS)** - Diferente dos outros modelos, é executado e gerenciado pelo provedor de serviços, dispensando a aquisição, instalação e manutenção de softwares e equipamentos. É muito utilizado em aplicativos de usuários finais (Spotify, Netflix e Gmail). Nesse modelo, o cliente não compra a licença de um produto, mas o direito de usufruir do serviço oferecido mediante pagamentos recorrentes.
+
+![Modelos-de-Computacao](Images/Modelos-de-Computacao.png)
+
+<details>
+  <summary><strong><h3> Escalabilidade </h3></strong></summary>
+
+A escalabilidade é a habilidade de expandir ou diminuir a capacidade de um sistema sem perder o desempenho, além de ser relativamente barato e rápido.
+
+As organizações que não contam com a escalabilidade em Cloud Computing estão fortemente ligadas às restrições físicas, como servidores e storages, etc. Muitas vezes, esses pontos são grandes impeditivos na concretização de novos negócios ou no aproveitamento de oportunidades inesperadas. Por outro lado, com a Cloud a infraestrutura pode aumentar ou diminuir e adaptar-se em harmonia com as necessidades da empresa. 
+
+A elasticidade em Cloud Computing torna mais fácil reagir rapidamente a todo tipo de evento. A grande vantagem é que você só paga pelos recursos que utilizar, quando utilizar. Simplificando, se um sistema de computação em nuvem (redes, armazenamento, servidores, aplicativos e serviços) puder responder rapidamente para atender a novas demandas – em tamanho ou volume – ele é escalável.
+
+Existem dois tipos de escalabilidade:
+- **Vertical**:
+
+O escalonamento vertical é adicionar mais recursos ao hardware do servidor, como como CPU, memória e armazenamento, ou melhorar o desempenho do disco, alterando-o para um mais rápido. Ou seja,  é comprar um hardware mais poderoso para dar conta da necessidade.
+
+Esse método é rápido e normalmente não requer nenhuma alteração arquitetural, especialmente na computação em nuvem, onde é possível aumentar a capacidade de uma máquina virtual com apenas alguns cliques. Porém, o hardware poderá atingir o limite de seu crescimento, e não ser o suficiente para atender a necessidade.
+
+- **Horizontal (elasticidade)**:
+
+Diferente do escalonamento vertical, o horizontal envolve adicionar mais instancias (máquinas) ao servidor ou banco de dados ao invés de apenas uma máquina robusta, aumentando a capacidade de processamento e memória.
+
+Isso implica aumentar o número de nós no cluster e reduzir as responsabilidades de cada nó membro. Com o maior número de nós (máquinas), a carga diminui devido à distribuição entre os nós de servidor separados.
+
+![Escalonamento](Images/Escalonamento.jpg)
+</details>
+
+<details>
+  <summary><strong><h3> Alta Disponibilidade </h3></strong></summary>
+Implica em garantir que os recursos de TI estejam disponíveis a todo momento, mesmo que ocasionalmente ocorra algum problema de infraestrutura, como falta de energia, as cargas de trabalho devem continuar a ser executadas independentemente.
+
+Desta forma, a alta disponibilidade significa criar/implementar processos para detectar pontos de falha, reduzindo as chances de ocorrências e criar redundância e replicação nos processos.
+
+Para projetar uma arquitetura de alta disponibilidade, três elementos-chave devem ser considerados: redundância, monitoramento e failover:
+
+__Redundância__ significa que vários componentes podem executar a mesma tarefa. O problema de um único ponto de falha é eliminado porque os componentes redundantes podem assumir uma tarefa executada por um componente que falhou.
+
+__Monitoramento__ significa verificar se um componente está ou não funcionando adequadamente.
+
+__Failover__ é o processo pelo qual um componente secundário se torna principal quando o componente principal falha.
+
+![Alta-disponibilidade](Images/Alta-disponibilidade.jpg)
+</details>
