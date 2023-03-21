@@ -6,6 +6,7 @@ Repositório destinado a anotações de estudo para a prova de certificação **
 ## :bookmark: Sumário
 [Introdução](#id1)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 [Tipos de Serviços Cloud](#id2)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+[Infraestrutura Global AWS](#id3)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
 ## <a id="id1">:page_facing_up: Introdução </a>
 Cloud Computing é a entrega sob demanda (On Demand) de recursos de computação, banco de dados, armazenamento, aplicações ou qualquer outro recurso de tecnologia que é entregue através de uma plataforma via internet, onde o pagamento é baseado no consumo (pay-as-you-go). Em vez de comprar, ter e manter datacenters e servidores físicos, você pode acessar serviços de tecnologia, como capacidade computacional, armazenamento e bancos de dados, conforme a necessidade, usando um provedor de nuvem como a Amazon Web Services (AWS).
@@ -143,11 +144,51 @@ Desta forma, a alta disponibilidade significa criar/implementar processos para d
 
 Para projetar uma arquitetura de alta disponibilidade, três elementos-chave devem ser considerados: redundância, monitoramento e failover:
 
-__Redundância__ significa que vários componentes podem executar a mesma tarefa. O problema de um único ponto de falha é eliminado porque os componentes redundantes podem assumir uma tarefa executada por um componente que falhou.
+_Redundância_ significa que vários componentes podem executar a mesma tarefa. O problema de um único ponto de falha é eliminado porque os componentes redundantes podem assumir uma tarefa executada por um componente que falhou.
 
-__Monitoramento__ significa verificar se um componente está ou não funcionando adequadamente.
+_Monitoramento_ significa verificar se um componente está ou não funcionando adequadamente.
 
-__Failover__ é o processo pelo qual um componente secundário se torna principal quando o componente principal falha.
+_Failover_ é o processo pelo qual um componente secundário se torna principal quando o componente principal falha.
 
 ![Alta-disponibilidade](Images/Alta-disponibilidade.jpg)
 </details>
+
+## <a id="id3">Infraestrutura Global AWS
+
+A infraestrutura global da AWS é construída em torno de Regiões (Regions), Zonas de Disponibilidade (AZs) e Pontos de Presença (Edge Location).
+
+![Regiões](Images/Regioes.png)
+
+- **Regiões (Regions)** - São áreas geográficas separadas que são utilizadas para provisionar a infraestrutura da AWS. Elas são distribuídas em todo o mundo para que os clientes possam escolher uma região mais próxima a eles. Quanto mais próxima a região estiver, melhor, desta forma é possível reduzir a latência de rede para os usuários finais. Em cada região existem vários locais isolados, conhecidos como _zonas de disponibilidade_. 
+
+_Memorizar: [Região(Zonas Disponiblidade)]_
+
+As regiões são mais tolerantes a falhas e tem maior estabilidade porque são isoladas umas das outras. Elas têm seus próprios recursos e esses recursos não replicam dados para outras regiões automaticamente, se quisermos/precisarmos transferir dados entre regiões, então temos que realizar as devidas configurações.
+
+Região = Conjunto de data centers em uma localização geográfica.
+
+- **Zonas de disponibilidade (AZ's)** - Em cada região são agrupados data centers, e cada grupo de data centers forma uma zona de disponibilidade. Cada AZ pertence a uma determinada região, cada região tem no mínimo 2 AZ's, se a infraestrutura de uma falhar, a outra continua atendendo e a sua aplicação continua disponível. Elas são isoladas, separadas a quilômetros de distância com energia, rede e conectadas por meio de links de alta velocidade, baixa latência e altamente redundante. 
+
+_Memorizar: [Região(Zonas Disponibilidade:data centers)]_
+
+Zonas de Disponibilidade = Conjunto de datacenters em determinada região, mas com sua estrutura física totalmente separada.
+
+- **Pontos de Presença (Edge Locations)** - É uma infraestrutura de servidores distribuido em diversas partes do mundo, onde são utilizados para entregar conteúdo aos usuários finais com menor latência. A Amazon utiliza o seu serviço de CDN (Content Delivery Network), o CloudFront que utiliza o armazenamento de cache para acelerar a navegação dos usuários em serviços estáticos, como por exemplo imagens, vídeos e páginas html.
+
+Exemplo: Supondo que você está no Brasil e quer enviar dados para Sydney. A primeira vez que for enviado, devido a distância geográfica, terá uma latência mais elevada. Mas após isso o dado é armazenado em cache em servidores proximo a localização. Desta forma, a próxima vez que o dado for solicitado, será entregue com muito menor latência.
+
+_Memorizar: [Região(Zonas Disponibilidade:data centers)PoP]_
+
+![Mapa](Images/Mapa.png)
+
+### Responsabilidade Compartilhada
+
+```bash
+While the AWS manages security OF the cloud, you are responsible for segurity IN the cloud.
+```
+
+**Responsabilidade da AWS: “segurança DA nuvem”**: A AWS é responsável por proteger a infraestrutura que executa todos os serviços oferecidos na Nuvem AWS. Essa infraestrutura é composta por hardware, software, redes e instalações que executam os Serviços de nuvem AWS.
+
+**Responsabilidade do cliente: “segurança NA nuvem”**: O cliente é responsável pelos dados, políticas de segurança, acessos lógicos, privilégios e criptografia.
+
+![Responsabilidades](Images/Responsabilidades.png)
