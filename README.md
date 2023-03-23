@@ -7,6 +7,7 @@ Repositório destinado a anotações de estudo para a prova de certificação **
 [Introdução](#id1)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 [Tipos de Serviços Cloud](#id2)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 [Infraestrutura Global AWS](#id3)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+[AWS IAM](#id4)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
 ## <a id="id1">:page_facing_up: Introdução </a>
 Cloud Computing é a entrega sob demanda (On Demand) de recursos de computação, banco de dados, armazenamento, aplicações ou qualquer outro recurso de tecnologia que é entregue através de uma plataforma via internet, onde o pagamento é baseado no consumo (pay-as-you-go). Em vez de comprar, ter e manter datacenters e servidores físicos, você pode acessar serviços de tecnologia, como capacidade computacional, armazenamento e bancos de dados, conforme a necessidade, usando um provedor de nuvem como a Amazon Web Services (AWS).
@@ -192,3 +193,25 @@ While the AWS manages security OF the cloud, you are responsible for segurity IN
 **Responsabilidade do cliente: “segurança NA nuvem”**: O cliente é responsável pelos dados, políticas de segurança, acessos lógicos, privilégios e criptografia.
 
 ![Responsabilidades](Images/Responsabilidades.png)
+
+## <a id="id4">AWS IAM
+
+O IAM é um serviço que fornece controle de acesso minucioso em toda a AWS de forma segura. Com o IAM, é possível controlar o acesso a serviços e recursos sob condições específicas. Desta forma, é possível gerenciar permissões para o quadro de funcionários e sistemas, definindo quem é autorizado (tem permissões) a acessar o que, especificando as permissões necessárias para cada situação.
+
+![aws-iam](Images/awsiam.png)
+
+**Users** :arrow_right: Pessoa ou serviço, com credenciais.
+**Groups** :arrow_right: Conjunto de usuários.
+**Roles** :arrow_right: Permissão temporária no qual você permite que um serviço possa acessar uma instância.
+**Permission** :arrow_right:  É uma regra IAM que dá acesso a um recurso da AWS. 
+**Police** :arrow_right: Conjunto de permissões.
+
+- Um usuário pode estar contido em **vários** grupos; 
+- Um grupo pode conter **vários** usuários;
+- Um grupo **NÃO** pode conter outro grupo;
+- Cada grupo ou usuário pode possuir de **N** policies;
+- Quando um usuário é adicionado a um grupo, ele automaticamente é associado a todas as policies (e as permissões anexadas a elas).
+
+A imagem a seguir mostra um exemplo simples de uma conta da AWS com três grupos. O grupo é um conjunto de usuários que têm responsabilidades semelhantes.
+
+![aws-iam](Images/Exemplo-Grupo-IAM.png)
