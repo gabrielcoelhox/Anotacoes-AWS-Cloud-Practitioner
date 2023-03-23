@@ -1,15 +1,17 @@
-# <p align="center"> :cloud: AWS Cloud Practitioner :cloud: </p>
-<p align="center"> 💻 Atualizado em 21 de Março de 2023 💻</p>
+# <p align="center"> <a id="id99"> :cloud: AWS Cloud Practitioner :cloud: </p>
+<p align="center"> 💻 Atualizado em 23 de Março de 2023 💻</p>
 
 Repositório destinado a anotações de estudo para a prova de certificação **AWS Cloud Practitioner (CLF-C01)**.
 
-## :bookmark: Sumário
+## :pushpin: Sumário
 [Introdução](#id1)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 [Tipos de Serviços Cloud](#id2)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 [Infraestrutura Global AWS](#id3)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-[AWS IAM](#id4)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+[Segurança e AWS IAM](#id4)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
 ## <a id="id1">:page_facing_up: Introdução </a>
+[INÍCIO](#id99)
+
 Cloud Computing é a entrega sob demanda (On Demand) de recursos de computação, banco de dados, armazenamento, aplicações ou qualquer outro recurso de tecnologia que é entregue através de uma plataforma via internet, onde o pagamento é baseado no consumo (pay-as-you-go). Em vez de comprar, ter e manter datacenters e servidores físicos, você pode acessar serviços de tecnologia, como capacidade computacional, armazenamento e bancos de dados, conforme a necessidade, usando um provedor de nuvem como a Amazon Web Services (AWS).
 
 ![Fluxo01](Images/Fluxo01.jpg)
@@ -98,7 +100,8 @@ O objetivo é entender a diferença de cada plano de suporte e conseguir sugerir
 | <div align="center">**TAM - Technical <br>Account Manager**</div> | <div align="center">-</div> | <div align="center">-</div> | <div align="center">-</div> | <div align="center">**Grupo de gerentes <br>TAM, que indicam <br>programas e <br>especialistas AWS**</div> | <div align="center">**SIM**</div> |
 </details>
 
-## <a id="id2">Tipos de serviços Cloud
+## <a id="id2">:open_umbrella: Tipos de serviços Cloud
+[INÍCIO](#id99)
 
 Os três principais tipos de computação em Nuvem são, infraestrutura como serviço (IaaS), plataforma como serviço (PaaS) e software como serviço (SaaS). Cada tipo de computação em Nuvem oferece diferentes níveis de controle, flexibilidade e gerenciamento para que você possa selecionar o conjunto certo de serviços para as suas necessidades.
 
@@ -154,7 +157,8 @@ _Failover_ é o processo pelo qual um componente secundário se torna principal 
 ![Alta-disponibilidade](Images/Alta-disponibilidade.jpg)
 </details>
 
-## <a id="id3">Infraestrutura Global AWS
+## <a id="id3"> :globe_with_meridians: Infraestrutura Global AWS
+[INÍCIO](#id99)
 
 A infraestrutura global da AWS é construída em torno de Regiões (Regions), Zonas de Disponibilidade (AZs) e Pontos de Presença (Edge Location).
 
@@ -184,9 +188,8 @@ _Memorizar: [Região(Zonas Disponibilidade:data centers)PoP]_
 
 ### Responsabilidade Compartilhada
 
-```bash
-While the AWS manages security OF the cloud, you are responsible for segurity IN the cloud.
-```
+
+> While the AWS manages security **OF** the cloud, you are responsible for segurity **IN** the cloud.
 
 **Responsabilidade da AWS: “segurança DA nuvem”**: A AWS é responsável por proteger a infraestrutura que executa todos os serviços oferecidos na Nuvem AWS. Essa infraestrutura é composta por hardware, software, redes e instalações que executam os Serviços de nuvem AWS.
 
@@ -194,7 +197,8 @@ While the AWS manages security OF the cloud, you are responsible for segurity IN
 
 ![Responsabilidades](Images/Responsabilidades.png)
 
-## <a id="id4">AWS IAM
+## <a id="id4"> :closed_lock_with_key: Segurança e AWS IAM
+[INÍCIO](#id99)
 
 O IAM é um serviço que fornece controle de acesso minucioso em toda a AWS de forma segura. Com o IAM, é possível controlar o acesso a serviços e recursos sob condições específicas. Desta forma, é possível gerenciar permissões para o quadro de funcionários e sistemas, definindo quem é autorizado (tem permissões) a acessar o que, especificando as permissões necessárias para cada situação.
 
@@ -215,3 +219,36 @@ O IAM é um serviço que fornece controle de acesso minucioso em toda a AWS de f
 A imagem a seguir mostra um exemplo simples de uma conta da AWS com três grupos. O grupo é um conjunto de usuários que têm responsabilidades semelhantes.
 
 ![aws-iam](Images/Exemplo-Grupo-IAM.png)
+
+**IAM MFA Overview (Autenticação Multifator)** - É um processo de autenticação complementar do login, que utiliza várias etapas que obriga o usuário a inserir informações que vão além de uma simples senha. Por exemplo, juntamente com a senha, os usuários podem ser solicitados a inserir um código que foi enviado para o e-mail deles, responder a uma pergunta secreta ou verificar uma impressão digital. Em caso de comprometimento de uma senha do sistema, uma segunda forma de autenticação pode ajudar a impedir o acesso não autorizado à conta.
+
+1. **Posso habilitar e desabilitar o acesso de um usuário?**
+Sim. Você pode habilitar e desabilitar a chaves de acesso de um usuário do IAM por meio de APIs do IAM, da CLI da AWS ou do console do IAM. Se você desabilitar as chaves de acesso, o usuário não poderá acessar programaticamente os serviços da AWS.
+2. **Os nomes de usuários do IAM têm de ser endereços de e-mail?**
+Não, mas podem ser. Os nomes de usuário são apenas strings ASCII que são exclusivas dentro de uma determinada conta da AWS. Você pode atribuir nomes usando qualquer convenção de nomes que escolher, incluindo endereços de e-mail.
+3. **Posso definir uma política para as senhas dos meus usuários?**
+Sim, você pode aplicar senhas fortes, como senhas com comprimento mínimo, com pelo menos um número ou caractere especial. Você também pode aplicar expiração automática de senhas, impedir a reutilização de senhas antigas e exigir a redefinição da senha no próximo login na AWS.
+
+### AWS WAF
+
+O [AWS WAF](https://aws.amazon.com/pt/waf/) é um firewall de aplicações Web que ajuda a proteger aplicações Web de ataques por meio da configuração de regras que permitem, bloqueiam ou monitoram solicitações da Web de acordo com condições que você mesmo define. Essas condições incluem endereços IP, cabeçalhos e corpo HTTP, strings de URI, injeção de SQL e cross-site scripting.
+
+![aws-waf](Images/awswaf.png)
+
+1. **Como o AWS WAF bloqueia ou permite o tráfego?**
+Conforme o serviço subjacente recebe solicitações para os sites, envia essas solicitações para o AWS WAF para verificar o cumprimento das regras. Quando uma solicitação cumpre uma condição definida nas regras, o AWS WAF instrui o serviço subjacente para bloquear ou permitir a solicitação, de acordo com a ação definida para a condição.
+2. **Como o AWS WAF protege sites ou aplicativos web?**
+O AWS WAF é estreitamente integrado ao Amazon CloudFront e ao Application Load Balancer (ALB), serviços normalmente usados pelos clientes da AWS para entregar conteúdo para sites e aplicativos. Quando você usa o AWS WAF no Amazon CloudFront, suas regras são executadas em todos os pontos de presença da AWS, localizadas em todo o mundo e próximas dos seus usuários finais. Isso significa que a segurança não prejudica a performance. As solicitações bloqueadas são interrompidas antes de elas atingirem os seus servidores web. Quando você usa o AWS WAF no Application Load Balancer, suas regras são executadas na região e podem ser usadas para proteger load balancers voltados à Internet ou a uso interno.
+3. **Eu posso utilizar o AWS WAF para proteger sites que não estão hospedados na AWS?**
+Sim, o AWS WAF está integrado com o Amazon CloudFront, que comporta origens personalizadas fora da AWS.
+4. **Que tipos de ataques o AWS WAF pode ajudar a interromper?**
+O AWS WAF ajuda a proteger o seu site de técnicas de ataque comuns, como a injeção de SQL e o cross-site scripting (XSS). Além disso, você pode criar regras que possam bloquear ataques de agentes-usuários específicos, bots maliciosos ou content scrapers.
+
+### AWS Shield
+
+O [AWS Shield](https://aws.amazon.com/pt/shield/) é um serviço gerenciado que fornece proteção contra ataques DDoS para os aplicativos executados na AWS. 
+- O AWS Shield Standard é habilitado automaticamente a todos os clientes da AWS sem custo adicional.
+- O AWS Shield Advanced é um serviço pago opcional. 
+- O AWS Shield Advanced oferece proteções adicionais contra ataques maiores e mais sofisticados para aplicações executadas no Amazon Elastic Compute Cloud (Amazon EC2), Elastic Load Balancing (ELB), Amazon CloudFront, AWS Global Accelerator e Route 53.
+
+![aws-shield](Images/aws-shield.png)
