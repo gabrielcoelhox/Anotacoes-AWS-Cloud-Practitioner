@@ -252,3 +252,9 @@ O [AWS Shield](https://aws.amazon.com/pt/shield/) é um serviço gerenciado que 
 - O AWS Shield Advanced oferece proteções adicionais contra ataques maiores e mais sofisticados para aplicações executadas no Amazon Elastic Compute Cloud (Amazon EC2), Elastic Load Balancing (ELB), Amazon CloudFront, AWS Global Accelerator e Route 53.
 
 ![aws-shield](Images/aws-shield.png)
+
+### Amazon Cognito
+
+O [Amazon Cognito](https://aws.amazon.com/pt/cognito/) permite adicionar cadastramento, login e controle de acesso de usuários a aplicativos web e móveis, com o login do Facebook, Google, Amazon e de provedores de identidade empresariais.
+
+![cognito](Images/cognito.png)
