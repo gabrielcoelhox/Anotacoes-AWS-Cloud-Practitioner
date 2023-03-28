@@ -8,6 +8,7 @@ Repositório destinado a anotações de estudo para a prova de certificação **
 [Tipos de Serviços Cloud](#id2)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 [Infraestrutura Global AWS](#id3)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 [Segurança e AWS IAM](#id4)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+[EC2](#id5)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
 ## <a id="id1">:page_facing_up: Introdução </a>
 [INÍCIO](#id99)
@@ -258,3 +259,72 @@ O [AWS Shield](https://aws.amazon.com/pt/shield/) é um serviço gerenciado que 
 O [Amazon Cognito](https://aws.amazon.com/pt/cognito/) permite adicionar cadastramento, login e controle de acesso de usuários a aplicativos web e móveis, com o login do Facebook, Google, Amazon e de provedores de identidade empresariais.
 
 ![cognito](Images/cognito.png)
+
+## <a id="id5"> EC2
+[INÍCIO](#id99)
+
+O [Amazon **E**lastic **C**ompute **C**loud (EC2)](https://aws.amazon.com/pt/ec2/) oferece uma capacidade de computação escalável na Nuvem da AWS. É uma solução que facilita a obtenção de servidores virtuais, também conhecidos como instâncias de computadores na nuvem. O seu uso elimina a necessidade de investir em hardware inicialmente, portanto, você pode desenvolver e implantar aplicativos com mais rapidez.
+
+É possível usar o EC2 para executar quantos servidores virtuais forem necessários, configurar a segurança e gerenciar o armazenamento. Além disso, permite aumentar ou reduzir a escala para lidar com alterações nos requisitos ou com picos em popularidade, reduzindo sua necessidade de prever o tráfego.
+
+### Características
+
+- **Múltiplas instâncias** - É possível escolher o tipo de instância que melhor se adéqua às suas necessidades. Também é possível mudar o tipo de instância quando necessário, aumentando ou diminuindo sua capacidade de armazenamento em minutos. O processo é simples, é preciso apenas pausar as instâncias, selecionar um novo modelo e reiniciar o processo.
+
+- **Arquitetura confiável** - O Elastic Load Balancing ajuda a distribuir a carga entre as zonas de disponibilidade e o escalonamento automático garante a disponibilidade das aplicações.
+
+- **Alto nível de segurança** - A Elastic Compute Cloud (EC2) usa a Amazon Virtual Private Cloud (VPC) para manter suas aplicações seguras. Você tem completo controle sobre o armazenamento, as comunicações, os usuários, os logins e o acesso à rede. Também é livre para adicionar outras camadas de segurança, como controlar se e como suas instâncias têm acesso à internet.
+
+### Instância
+
+Quando se executa uma instância, o tipo de instância que é especificado determina o hardware do computador host usado para sua instância. Cada tipo de instância oferece recursos de computação, memória e armazenamento diferentes, além de ser agrupado em famílias de instâncias de acordo com esses recursos. Selecione um tipo de instância com base nos requisitos da aplicação ou do software que você pretende executar.
+
+![tipos-de-instancia](Images/Tipos-de-instancia.png)
+
+### Tipos de inicialização de instância (Launch Types)
+
+1. **On-Demand:**
+  - Alto custo se usado por longo prazo;
+  - Comprado a qualquer momento, sem compromisso de permanência;
+  - Paga o que usar (por hora ou segundo);
+  - Sem pagamento adiantado.
+
+É útil para cargas de trabalho de curto prazo, validar hipóteses, com pico de utilização previsível, testar e experimentar um ambiente.
+
+2. **Reservado:**
+  - Permanência mínima de 1 ano;
+  - Pode ser comprado no modo 24/7, no modo 24/7 com instância flexível ou em apenas algumas horas por semana;
+  - Possui pagamento adiantado;
+
+É útil para ambiente de produção que foi testado e não será modificado, e excelente para banco de dados.
+
+3. **Host Dedicado:**
+  - Uso de datacenter dedicado para alocação de instâncias;
+  - Servidor físico EC2 exclusivo;
+  - Permanência de 3 anos.
+
+É útil para vincular licenças de software.
+
+4. **Instância Dedicada:**
+  - Hardware dedicado;
+  - Permanência de 3 anos;
+  - Compartilha o hardware com outras istâncias na mesma conta;
+  - Só pode movimentar o hardware se interromper e reiniciar.
+
+| CARACTERÍSTICA | Instâncias <br>Dedicadas | Hosts <br>Dedicados |
+|--- |--- |--- |
+<div align="center">Permite o uso de servidores físicos dedicados</div> | <div align="center">X</div>| <div align="center">X</div>
+<div align="center">Faturamento por instância</div> | <div align="center">X</div> | <div align="center">X</div>
+<div align="center">Faturamento por host</div> |  | <div align="center">X</div>
+<div align="center">Visibilidade de soquetes, núcleos, IDs de host</div> |  | <div align="center">X</div>
+<div align="center">Afinidade entre um host e uma instância</div> |  | <div align="center">X</div>
+<div align="center">Inserção de instância específica</div> |  | <div align="center">X</div>
+<div align="center">Inserção de instância automática</div> |<div align="center">X</div> | <div align="center">X</div>
+<div align="center">Adicione capacidade usando uma solicitação de alocação</div> |  | <div align="center">X</div>
+
+5. **Instancias Spot:**
+  - Menor valor;
+  - Não recomendado para trabalhos críticos e banco de dados;
+  - São finalizadas quando o preço do spot, é maior do que o preço que você estabeleceu para pagar.
+
+É útil para uma urgência, serviços que podem ser parados e iniciados novamente, análise de dados, processamento de imagens.
