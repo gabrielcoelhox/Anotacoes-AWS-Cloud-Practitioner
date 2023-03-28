@@ -311,16 +311,16 @@ Quando se executa uma instância, o tipo de instância que é especificado deter
   - Compartilha o hardware com outras istâncias na mesma conta;
   - Só pode movimentar o hardware se interromper e reiniciar.
 
-| CARACTERÍSTICA | Instâncias <br>Dedicadas | Hosts <br>Dedicados |
-|--- |--- |--- |
-<div align="center">Permite o uso de servidores físicos dedicados</div> | <div align="center">X</div>| <div align="center">X</div>
-<div align="center">Faturamento por instância</div> | <div align="center">X</div> | <div align="center">X</div>
-<div align="center">Faturamento por host</div> |  | <div align="center">X</div>
-<div align="center">Visibilidade de soquetes, núcleos, IDs de host</div> |  | <div align="center">X</div>
-<div align="center">Afinidade entre um host e uma instância</div> |  | <div align="center">X</div>
-<div align="center">Inserção de instância específica</div> |  | <div align="center">X</div>
-<div align="center">Inserção de instância automática</div> |<div align="center">X</div> | <div align="center">X</div>
-<div align="center">Adicione capacidade usando uma solicitação de alocação</div> |  | <div align="center">X</div>
+| <div align="center">CARACTERÍSTICA</div> | <div align="center">Instâncias <br>Dedicadas</div> | <div align="center">Hosts <br>Dedicados</div> |
+| --- | --- | --- |
+| <div align="center">Permite o uso de servidores físicos dedicados</div> | <div align="center">X</div> | <div align="center">X</div> |
+| <div align="center">Faturamento por instância</div> | <div align="center">X</div> | <div align="center">X</div> |
+| <div align="center">Faturamento por host</div> | | <div align="center">X</div> |
+| <div align="center">Visibilidade de soquetes, núcleos, IDs de host</div> | | <div align="center">X</div> |
+| <div align="center">Afinidade entre um host e uma instância</div> | | <div align="center">X</div> |
+| <div align="center">Inserção de instância específica</div> | | <div align="center">X</div> |
+| <div align="center">Inserção de instância automática</div> |<div align="center">X</div> | <div align="center">X</div> |
+| <div align="center">Adicione capacidade usando uma solicitação de alocação</div> | | <div align="center">X</div> |
 
 5. **Instancias Spot:**
   - Menor valor;
