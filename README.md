@@ -328,3 +328,14 @@ Quando se executa uma instância, o tipo de instância que é especificado deter
   - São finalizadas quando o preço do spot, é maior do que o preço que você estabeleceu para pagar.
 
 É útil para uma urgência, serviços que podem ser parados e iniciados novamente, análise de dados, processamento de imagens.
+
+### Auto Scaling Group (ASG) 
+
+![AWS-Scaling](Images/Aws-Scaling.png)
+
+O [AWS Auto Scaling](https://aws.amazon.com/pt/autoscaling/) é um serviço da AWS para ajudar a otimizar o desempenho de aplicativos e reduzir custos de infraestrutura por meio da escalabilidade fácil e segura de vários recursos da AWS. Ele monitora os aplicativos e ajusta automaticamente a capacidade para manter um desempenho constante e previsível pelo menor custo possível.
+
+- [x] Escalabilidade automatizada;
+- [x] Realiza verificações de health check nas instâncias. Finaliza as instâncias não saudáveis (unhealthy) e inicia novas;
+- [x] Scale out (aumentar com a necessidade de demanda) e Scale in (diminuir quando a demanda deixa de ocorrer);
+- [x] Gratuito, paga apenas pelos recursos utilizados.
