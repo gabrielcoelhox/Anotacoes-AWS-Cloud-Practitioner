@@ -9,6 +9,8 @@ Repositório destinado a anotações de estudo para a prova de certificação **
 [Infraestrutura Global AWS](#id3)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 [Segurança e AWS IAM](#id4)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 [EC2](#id5)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+[Auto Scaling Group](#id6)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+[AWS Lambda](#id7)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
 ## <a id="id1">:page_facing_up: Introdução </a>
 [INÍCIO](#id99)
@@ -386,11 +388,12 @@ Quando se executa uma instância, o tipo de instância que é especificado deter
 
 É útil para uma urgência, serviços que podem ser parados e iniciados novamente, análise de dados, processamento de imagens.
 
-### Auto Scaling Group (ASG) 
-
-![AWS-Scaling](Images/Aws-Scaling.png)
+## <a id="id6"> :arrow_up_down: Auto Scaling Group (ASG)</a>
+[INÍCIO](#id99)
 
 O [AWS Auto Scaling](https://aws.amazon.com/pt/autoscaling/) é um serviço da AWS para ajudar a otimizar o desempenho de aplicativos e reduzir custos de infraestrutura por meio da escalabilidade fácil e segura de vários recursos da AWS. Ele monitora os aplicativos e ajusta automaticamente a capacidade para manter um desempenho constante e previsível pelo menor custo possível.
+
+![AWS-Scaling](Images/Aws-Scaling.png)
 
 Principais características e conceitos:
 
@@ -400,3 +403,18 @@ Principais características e conceitos:
 - [x] Gratuito, paga apenas pelos recursos utilizados.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Auto Scaling Group é uma ferramenta que visa garantir que sua aplicação tenha capacidade suficiente para lidar com variações na demanda sem a necessidade de intervenção manual. Ele permite que o cliente configure e gerencie facilmente o dimensionamento automático das instâncias EC2, tornando a infraestrutura mais eficiente, escalável e resiliente. Com o ASG, você pode manter a disponibilidade e o desempenho da sua aplicação, independentemente das flutuações na demanda do usuário.
+
+## <a id="id7"> :symbols: AWS Lambda</a>
+[INÍCIO](#id99)
+
+O [AWS Lambda](https://aws.amazon.com/pt/lambda/) é um serviço de computação sem servidor que permite que você execute código de forma assíncrona, sem precisar provisionar ou gerenciar servidores. Com o Lambda, você pode executar pequenas unidades de código, conhecidas como "funções", em resposta a eventos específicos, como chamadas de API, uploads de arquivos, alterações em bancos de dados, entre outros.
+
+![AWS-Lambda](Images/aws-lambda.png)
+
+**Suporte a Linguagens de Programação:** O Lambda suporta várias linguagens de programação, incluindo Node.js, Python, Ruby, Java, Go, .NET Core e muito mais. Isso oferece flexibilidade para desenvolver suas funções em uma linguagem que você esteja familiarizado.
+
+**Tempo de Execução e Recursos Configuráveis:** Você pode definir o tempo máximo de execução da função e configurar a quantidade de memória alocada para ela. Isso permite otimizar o desempenho da função e ajustar os recursos de acordo com as necessidades do código.
+
+**Custo Efetivo:** O Lambda é cobrado pelo tempo de execução real das funções, com uma quantidade gratuita de execuções e recursos disponíveis para começar. Como você paga apenas pelas invocações das funções e pela quantidade de recursos consumidos durante a execução, o Lambda pode ser uma opção de custo efetivo para muitos casos de uso.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O AWS Lambda é uma ferramenta para a criação de aplicações escaláveis, altamente disponíveis e sem servidor. Ele permite que os desenvolvedores criem microsserviços e funções que respondam a eventos específicos, sem a necessidade de gerenciar a infraestrutura subjacente. Com o Lambda, você pode se concentrar no desenvolvimento do código e criar soluções ágeis, reativas e prontas para a nuvem.
