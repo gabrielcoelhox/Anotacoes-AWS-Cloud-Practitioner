@@ -1,5 +1,5 @@
 # <p align="center"> <a id="id99"> :cloud: AWS Cloud Practitioner :cloud: </p>
-<p align="center"> 💻 Atualizado em 23 de Março de 2023 💻</p>
+<p align="center"> 💻 Atualizado em 20 de Julho de 2023 💻</p>
 
 Repositório destinado a anotações de estudo para a prova de certificação **AWS Cloud Practitioner (CLF-C01)**.
 
@@ -167,49 +167,70 @@ A infraestrutura global da AWS é construída em torno de Regiões (Regions), Zo
 
 - **Regiões (Regions)** - São áreas geográficas separadas que são utilizadas para provisionar a infraestrutura da AWS. Elas são distribuídas em todo o mundo para que os clientes possam escolher uma região mais próxima a eles. Quanto mais próxima a região estiver, melhor, desta forma é possível reduzir a latência de rede para os usuários finais. Em cada região existem vários locais isolados, conhecidos como _zonas de disponibilidade_. 
 
-_Memorizar: [Região(Zonas Disponiblidade)]_
+$\textcolor{gold}{\textsf{Memorizar:}}$ _[Região(Zonas Disponiblidade)]_
 
 As regiões são mais tolerantes a falhas e tem maior estabilidade porque são isoladas umas das outras. Elas têm seus próprios recursos e esses recursos não replicam dados para outras regiões automaticamente, se quisermos/precisarmos transferir dados entre regiões, então temos que realizar as devidas configurações.
 
 Região = Conjunto de data centers em uma localização geográfica.
 
-- **Zonas de disponibilidade (AZ's)** - Em cada região são agrupados data centers, e cada grupo de data centers forma uma zona de disponibilidade. Cada AZ pertence a uma determinada região, cada região tem no mínimo 2 AZ's, se a infraestrutura de uma falhar, a outra continua atendendo e a sua aplicação continua disponível. Elas são isoladas, separadas a quilômetros de distância com energia, rede e conectadas por meio de links de alta velocidade, baixa latência e altamente redundante. 
+- **Zonas de disponibilidade (AZ's)** - Em cada região são agrupados data centers, e cada grupo de data centers forma uma zona de disponibilidade. Cada AZ pertence a uma determinada região, cada região tem no mínimo 2 AZ's, se a infraestrutura de uma falhar, a outra continua atendendo e a sua aplicação continua disponível. Elas são isoladas, separadas a quilômetros de distância com energia, rede e conectadas por meio de links de alta velocidade, baixa latência e altamente redundante.
 
-_Memorizar: [Região(Zonas Disponibilidade:data centers)]_
+$\textcolor{gold}{\textsf{Memorizar:}}$ _[Região(Zonas Disponibilidade:data centers)]_
 
 Zonas de Disponibilidade = Conjunto de datacenters em determinada região, mas com sua estrutura física totalmente separada.
 
-- **Pontos de Presença (Edge Locations)** - É uma infraestrutura de servidores distribuido em diversas partes do mundo, onde são utilizados para entregar conteúdo aos usuários finais com menor latência. A Amazon utiliza o seu serviço de CDN (Content Delivery Network), o CloudFront que utiliza o armazenamento de cache para acelerar a navegação dos usuários em serviços estáticos, como por exemplo imagens, vídeos e páginas html.
+- **Pontos de Presença (Edge Locations)** - É uma infraestrutura de servidores distribuídos em diversas partes do mundo onde são utilizados para entregar conteúdo aos usuários finais com menor latência. A Amazon utiliza o seu serviço de CDN (Content Delivery Network), o CloudFront que utiliza o armazenamento de cache para acelerar a navegação dos usuários em serviços estáticos, como por exemplo imagens, vídeos e páginas html.
 
-Exemplo: Supondo que você está no Brasil e quer enviar dados para Sydney. A primeira vez que for enviado, devido a distância geográfica, terá uma latência mais elevada. Mas após isso o dado é armazenado em cache em servidores proximo a localização. Desta forma, a próxima vez que o dado for solicitado, será entregue com muito menor latência.
+$\textcolor{salmon}{\textsf{Exemplo:}}$ Supondo que você está no Brasil e quer enviar dados para Sydney. A primeira vez que for enviado, devido a distância geográfica, terá uma latência mais elevada. Mas após isso o dado é armazenado em cache em servidores proximo a localização. Desta forma, a próxima vez que o dado for solicitado, será entregue com muito menor latência.
 
-_Memorizar: [Região(Zonas Disponibilidade:data centers)PoP]_
+$\textcolor{gold}{\textsf{Memorizar:}}$ _[Região(Zonas Disponibilidade:data centers)PoP]_
 
 ![Mapa](Images/Mapa.png)
 
 ### Responsabilidade Compartilhada
 
-
 > While the AWS manages security **OF** the cloud, you are responsible for segurity **IN** the cloud.
 
-**Responsabilidade da AWS: “segurança DA nuvem”**: A AWS é responsável por proteger a infraestrutura que executa todos os serviços oferecidos na Nuvem AWS. Essa infraestrutura é composta por hardware, software, redes e instalações que executam os Serviços de nuvem AWS.
+A responsabilidade compartilhada é um conceito da Amazon Web Services que define a divisão das responsabilidades entre a AWS como provedor da infraestrutura de nuvem e o cliente que utiliza os serviços da AWS para implantar e gerenciar suas aplicações.
 
-**Responsabilidade do cliente: “segurança NA nuvem”**: O cliente é responsável pelos dados, políticas de segurança, acessos lógicos, privilégios e criptografia.
+A AWS é responsável pela segurança e proteção dos serviços subjacentes, como servidores físicos, data centers, rede, hipervisor e infraestrutura global. Isso inclui a proteção física dos data centers, a manutenção dos servidores e a segurança da rede em que os serviços são executados.
+
+Já o cliente da AWS, é responsável pela segurança da sua carga de trabalho (workload) e dos dados que armazena e processa nos serviços da AWS. Isso inclui a configuração correta dos recursos, a definição adequada de permissões e políticas de acesso, o controle do acesso às instâncias EC2, o gerenciamento de chaves de criptografia, entre outros aspectos.
+
+**Responsabilidade da AWS:**
+- Proteger a infraestrutura física dos data centers, incluindo vigilância, controle de acesso, resiliência, energia e refrigeração;
+- Manter e atualizar a infraestrutura, incluindo hardware, redes e software subjacente dos serviços;
+- Proteger a rede global que conecta os data centers e os serviços da AWS;
+- Garantir a conformidade com várias certificações de segurança e conformidade.
+
+**Responsabilidade do Cliente:**
+- Configurar e gerenciar adequadamente os recursos da AWS que utiliza, como instâncias EC2, grupos de segurança, tabelas do DynamoDB, etc;
+- Controlar o acesso aos seus recursos usando políticas de controle de acesso (IAM) e grupos de segurança;
+- Configurar e manter firewalls e proteções adicionais para suas aplicações, se necessário;
+- Gerenciar chaves de criptografia e proteger dados sensíveis.
+
+Em resumo, a AWS é responsável pela segurança da infraestrutura física e dos serviços que oferece, enquanto o cliente é responsável por garantir a segurança de sua própria carga de trabalho, aplicativos e dados, bem como por implementar boas práticas de segurança na configuração e no gerenciamento dos recursos da AWS que você utiliza. A compreensão dessa divisão de responsabilidades é essencial para garantir que a implantação na AWS seja segura e esteja em conformidade com os padrões de segurança e privacidade.
 
 ![Responsabilidades](Images/Responsabilidades.png)
 
 ## <a id="id4"> :closed_lock_with_key: Segurança e AWS IAM
 [INÍCIO](#id99)
 
-O IAM é um serviço que fornece controle de acesso minucioso em toda a AWS de forma segura. Com o IAM, é possível controlar o acesso a serviços e recursos sob condições específicas. Desta forma, é possível gerenciar permissões para o quadro de funcionários e sistemas, definindo quem é autorizado (tem permissões) a acessar o que, especificando as permissões necessárias para cada situação.
+O [IAM](https://aws.amazon.com/pt/iam/) (Identity and Access Management) é um serviço que permite controlar o acesso e a segurança dos recursos da AWS. Com o IAM, você pode criar e gerenciar identidades (como usuários, grupos e funções) e definir permissões, determinando quais ações elas podem realizar em quais recursos da AWS. O IAM permite que você conceda acesso apenas aos recursos necessários para cada usuário ou processo, melhorando a segurança e ajudando a seguir o princípio do menor privilégio.
 
 ![aws-iam](Images/awsiam.png)
 
-**Users** :arrow_right: Pessoa ou serviço, com credenciais.
-**Groups** :arrow_right: Conjunto de usuários.
-**Roles** :arrow_right: Permissão temporária no qual você permite que um serviço possa acessar uma instância.
-**Permission** :arrow_right:  É uma regra IAM que dá acesso a um recurso da AWS. 
-**Police** :arrow_right: Conjunto de permissões.
+**Usuários (Users):** Representam indivíduos que podem autenticar e interagir com a AWS. Cada usuário é associado a credenciais de login (nome de usuário e senha) ou pode ser configurado para usar acesso federado (por exemplo, com um provedor de identidade corporativa). Os usuários são atribuídos a permissões por meio de políticas de controle de acesso.
+
+**Grupos (Groups):** Os grupos são conjuntos de usuários com permissões em comum. Em vez de definir permissões individuais para cada usuário, você pode atribuir políticas ao grupo e todos os usuários pertencentes a esse grupo herdarão essas permissões.
+
+**Funções (Roles):** As funções são comumente usadas para conceder acesso temporário a recursos específicos. Isso é especialmente útil para aplicativos que rodam em serviços como o AWS Lambda.
+
+**Políticas (Polices):** As políticas são documentos JSON que definem as permissões para ações específicas em recursos da AWS. Elas podem ser associadas a usuários, grupos ou funções. As políticas são flexíveis e podem ser detalhadas até mesmo para recursos específicos dentro de um serviço da AWS.
+
+**Permissões (Permissions):** As permissões são concedidas através da combinação de políticas atribuídas a usuários, grupos e funções. Cada ação na AWS é protegida por um controle de acesso que pode ser permitido ou negado com base nas permissões definidas nas políticas. Ou seja, é um conjunto de permissões.
+
+❗ $\textcolor{salmon}{\textsf{Observação:}}$
 
 - Um usuário pode estar contido em **vários** grupos; 
 - Um grupo pode conter **vários** usuários;
@@ -221,44 +242,80 @@ A imagem a seguir mostra um exemplo simples de uma conta da AWS com três grupos
 
 ![aws-iam](Images/Exemplo-Grupo-IAM.png)
 
-**IAM MFA Overview (Autenticação Multifator)** - É um processo de autenticação complementar do login, que utiliza várias etapas que obriga o usuário a inserir informações que vão além de uma simples senha. Por exemplo, juntamente com a senha, os usuários podem ser solicitados a inserir um código que foi enviado para o e-mail deles, responder a uma pergunta secreta ou verificar uma impressão digital. Em caso de comprometimento de uma senha do sistema, uma segunda forma de autenticação pode ajudar a impedir o acesso não autorizado à conta.
+**IAM MFA Overview (Autenticação Multifator)** - É um processo de autenticação complementar do login, que utiliza várias etapas que obriga o usuário a inserir informações que vão além de uma simples senha. 
+
+$\textcolor{salmon}{\textsf{Exemplo:}}$ Juntamente com a senha, os usuários podem ser solicitados a inserir um código que foi enviado para o e-mail deles, responder a uma pergunta secreta ou verificar uma impressão digital. Em caso de comprometimento de uma senha do sistema, uma segunda forma de autenticação pode ajudar a impedir o acesso não autorizado à conta.
+
+$\textcolor{salmon}{\textsf{FAQ:}}$
 
 1. **Posso habilitar e desabilitar o acesso de um usuário?**
-Sim. Você pode habilitar e desabilitar a chaves de acesso de um usuário do IAM por meio de APIs do IAM, da CLI da AWS ou do console do IAM. Se você desabilitar as chaves de acesso, o usuário não poderá acessar programaticamente os serviços da AWS.
+Sim. Você pode habilitar e desabilitar as chaves de acesso de um usuário do IAM por meio de APIs do IAM, da CLI da AWS ou do console do IAM. Se você desabilitar as chaves de acesso, o usuário não poderá acessar programaticamente os serviços da AWS.
 2. **Os nomes de usuários do IAM têm de ser endereços de e-mail?**
 Não, mas podem ser. Os nomes de usuário são apenas strings ASCII que são exclusivas dentro de uma determinada conta da AWS. Você pode atribuir nomes usando qualquer convenção de nomes que escolher, incluindo endereços de e-mail.
 3. **Posso definir uma política para as senhas dos meus usuários?**
 Sim, você pode aplicar senhas fortes, como senhas com comprimento mínimo, com pelo menos um número ou caractere especial. Você também pode aplicar expiração automática de senhas, impedir a reutilização de senhas antigas e exigir a redefinição da senha no próximo login na AWS.
 
-### AWS WAF
+## AWS WAF
+[INÍCIO](#id99)
 
-O [AWS WAF](https://aws.amazon.com/pt/waf/) é um firewall de aplicações Web que ajuda a proteger aplicações Web de ataques por meio da configuração de regras que permitem, bloqueiam ou monitoram solicitações da Web de acordo com condições que você mesmo define. Essas condições incluem endereços IP, cabeçalhos e corpo HTTP, strings de URI, injeção de SQL e cross-site scripting.
+O [AWS WAF](https://aws.amazon.com/pt/waf/) é um firewall de aplicações Web que ajuda a proteger aplicações Web de ataques por meio da configuração de regras que permitem, bloqueiam ou monitoram solicitações da Web de acordo com condições que você define. Essas condições incluem endereços IP, cabeçalhos e corpo HTTP, strings de URI, injeção de SQL e cross-site scripting.
 
 ![aws-waf](Images/awswaf.png)
 
-1. **Como o AWS WAF bloqueia ou permite o tráfego?**
-Conforme o serviço subjacente recebe solicitações para os sites, envia essas solicitações para o AWS WAF para verificar o cumprimento das regras. Quando uma solicitação cumpre uma condição definida nas regras, o AWS WAF instrui o serviço subjacente para bloquear ou permitir a solicitação, de acordo com a ação definida para a condição.
-2. **Como o AWS WAF protege sites ou aplicativos web?**
-O AWS WAF é estreitamente integrado ao Amazon CloudFront e ao Application Load Balancer (ALB), serviços normalmente usados pelos clientes da AWS para entregar conteúdo para sites e aplicativos. Quando você usa o AWS WAF no Amazon CloudFront, suas regras são executadas em todos os pontos de presença da AWS, localizadas em todo o mundo e próximas dos seus usuários finais. Isso significa que a segurança não prejudica a performance. As solicitações bloqueadas são interrompidas antes de elas atingirem os seus servidores web. Quando você usa o AWS WAF no Application Load Balancer, suas regras são executadas na região e podem ser usadas para proteger load balancers voltados à Internet ou a uso interno.
-3. **Eu posso utilizar o AWS WAF para proteger sites que não estão hospedados na AWS?**
-Sim, o AWS WAF está integrado com o Amazon CloudFront, que comporta origens personalizadas fora da AWS.
-4. **Que tipos de ataques o AWS WAF pode ajudar a interromper?**
-O AWS WAF ajuda a proteger o seu site de técnicas de ataque comuns, como a injeção de SQL e o cross-site scripting (XSS). Além disso, você pode criar regras que possam bloquear ataques de agentes-usuários específicos, bots maliciosos ou content scrapers.
+$\textcolor{salmon}{\textsf{Principais recursos e funcionalidades:}}$
 
-### AWS Shield
+**Firewall de Aplicativos Web:** O AWS WAF age como um firewall de aplicativos da web, permitindo que o cliente defina regras personalizadas para controlar o acesso a seu aplicativo web. É possivel configurar regras para permitir, bloquear ou contar solicitações com base em critérios específicos, como endereço IP, cabeçalhos HTTP, strings de consulta, entre outros.
+
+**Proteção contra Ataques Comuns:** O WAF ajuda a proteger as aplicações web contra ataques comuns, como injeção de SQL, cross-site scripting (XSS), ataques de força bruta, bots maliciosos, entre outros. Com regras pré-configuradas e gerenciadas pela AWS ou pelo cliente, o WAF pode bloquear automaticamente solicitações maliciosas antes que elas alcancem suas aplicações.
+
+**Regras Personalizadas:** Além das regras pré-configuradas, o cliente pode criar suas próprias regras personalizadas com expressões regulares (regex) e lógica booleana para atender aos requisitos específicos do seu aplicativo web.
+
+**Integração com Outros Serviços da AWS:** O WAF pode ser facilmente integrado a outros serviços da AWS, como o Amazon CloudFront (Content Delivery Network) e o Application Load Balancer (ALB), permitindo que o cliente aplique a proteção do WAF em camadas de distribuição de conteúdo ou balanciamento de carga.
+
+**Monitoramento e Logging:** O WAF oferece recursos de monitoramento e registro detalhados para que o cliente possa rastrear e analisar o tráfego web para suas aplicações. Isso ajuda a identificar padrões de ataque e permite ajustar suas regras de segurança conforme necessário.
+
+**Suporte a Regras de Rateio:** O WAF pode limitar a taxa de solicitações de entrada para proteger sua aplicação contra ataques de força bruta ou de negação de serviço (DDoS).
+
+**Integração com o AWS Shield:** O AWS WAF pode ser integrado ao AWS Shield, um serviço de mitigação de DDoS, para fornecer uma camada adicional de proteção contra ataques volumétricos.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O AWS WAF é uma parte essencial da estratégia de segurança para aplicativos web hospedados na AWS. Ele permite que você crie uma camada de segurança adicional para suas aplicações, garantindo que apenas tráfego legítimo seja permitido e protegendo contra ameaças comuns da web. Ao utilizar o WAF em conjunto com outras práticas de segurança da AWS, você pode aumentar a proteção e a confiabilidade das suas aplicações web na nuvem
+
+## AWS Shield
+[INÍCIO](#id99)
 
 O [AWS Shield](https://aws.amazon.com/pt/shield/) é um serviço gerenciado que fornece proteção contra ataques DDoS para os aplicativos executados na AWS. 
-- O AWS Shield Standard é habilitado automaticamente a todos os clientes da AWS sem custo adicional.
-- O AWS Shield Advanced é um serviço pago opcional. 
-- O AWS Shield Advanced oferece proteções adicionais contra ataques maiores e mais sofisticados para aplicações executadas no Amazon Elastic Compute Cloud (Amazon EC2), Elastic Load Balancing (ELB), Amazon CloudFront, AWS Global Accelerator e Route 53.
+
+**AWS Shield Standard:** É um serviço de proteção DDoS sem custo adicional que é automaticamente ativado para todas as contas da AWS. Ele oferece proteção contra os ataques mais comuns de camada de rede e camada de transporte, como ataques SYN/ACK, UDP reflection e DNS query floods. Essa camada básica de proteção é sempre aplicada a todos os recursos da AWS, ajudando a manter sua infraestrutura mais segura.
+
+**AWS Shield Advanced:** É uma camada de proteção DDoS mais robusta, disponível como um serviço adicional pago. Ele oferece recursos avançados de mitigação de DDoS e suporte 24x7 com acesso a especialistas da AWS DDoS Response Team (DRT). O Shield Advanced inclui recursos como:
+
+- Proteção avançada contra DDoS: Mitigação contra ataques mais sofisticados e de maior escala;
+- Monitoramento e relatórios detalhados: Acesso a detalhes adicionais sobre os ataques, permitindo uma melhor compreensão e análise;
+- Suporte prioritário: Acesso a especialistas da AWS para ajudar a mitigar ataques e fornecer orientação em tempo real;
+- Proteção para aplicativos não-AWS: A possibilidade de estender a proteção do AWS Shield para aplicações e recursos fora da AWS por meio do AWS Global Accelerator.
 
 ![aws-shield](Images/aws-shield.png)
 
-### Amazon Cognito
+$\textcolor{salmon}{\textsf{Resumo:}}$ O AWS Shield é uma parte importante da estratégia de segurança da AWS, pois ajuda a manter a disponibilidade e a performance dos recursos, protegendo-os contra ataques DDoS que podem afetar negativamente as operações comerciais. A escolha entre o AWS Shield Standard e o AWS Shield Advanced dependerá das necessidades específicas de proteção de cada aplicação e do nível de suporte desejado durante a mitigação de possíveis ataques. Em ambos os casos, a AWS oferece uma camada extra de segurança para manter seus aplicativos e recursos protegidos contra as ameaças cada vez mais sofisticadas da internet.
 
-O [Amazon Cognito](https://aws.amazon.com/pt/cognito/) permite adicionar cadastramento, login e controle de acesso de usuários a aplicativos web e móveis, com o login do Facebook, Google, Amazon e de provedores de identidade empresariais.
+## Amazon Cognito
+[INÍCIO](#id99)
+
+O [Amazon Cognito](https://aws.amazon.com/pt/cognito/) é um serviço que facilita a adição de recursos de autenticação, autorização e gerenciamento de usuários às suas aplicações web e móveis. Ele fornece uma solução completa de identidade e acesso, permitindo que o cliente se concentre no desenvolvimento do seu aplicativo, enquanto o Cognito lida com as complexidades de autenticação e gerenciamento de usuários.
 
 ![cognito](Images/cognito.png)
+
+**Cognito User Pools:** É um serviço de diretório de usuários que permite que o cliente crie e gerencie facilmente uma base de usuários para a aplicação. Ele suporta o registro de novos usuários, login, recuperação de senha, verificação de e-mail e número de telefone, além de fornecer tokens de acesso e atualização para autenticação em suas APIs.
+
+**Cognito Identity Pools:** Esse componente fornece uma solução para obter credenciais temporárias para autenticar usuários e fornecer acesso seguro a recursos da AWS. Com os pools de identidade, você pode obter identificadores únicos para usuários autenticados e não autenticados, permitindo que você controle de forma granular quais recursos eles têm acesso.
+
+**Social Identity Providers:** O Cognito suporta a integração com provedores de identidade social, como Google, Facebook e Amazon, o que permite que os usuários usem suas contas existentes para fazer login em sua aplicação.
+
+**Custom Authentication (Autenticação Personalizada):** Se o cliente tiver requisitos específicos de autenticação, o Cognito permite a criação fluxos de autenticação personalizados usando o AWS Lambda, permitindo uma maior flexibilidade no processo de autenticação.
+
+**Segurança:** O Cognito protege as informações do usuário com criptografia e medidas de segurança avançadas, garantindo que as credenciais do usuário sejam armazenadas com segurança e transmitidas de forma protegida.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon Cognito é uma excelente escolha para adicionar funcionalidades de autenticação e gerenciamento de usuários a suas aplicações. Ele é altamente escalável, seguro e fornece uma série de recursos prontos para uso, permitindo que o cliente crie uma experiência de autenticação e autorização confiável para seus usuários sem a necessidade de desenvolver tudo do zero.
 
 ## <a id="id5"> EC2
 [INÍCIO](#id99)
@@ -277,7 +334,7 @@ O [Amazon **E**lastic **C**ompute **C**loud (EC2)](https://aws.amazon.com/pt/ec2
 
 ### Instância
 
-Quando se executa uma instância, o tipo de instância que é especificado determina o hardware do computador host usado para sua instância. Cada tipo de instância oferece recursos de computação, memória e armazenamento diferentes, além de ser agrupado em famílias de instâncias de acordo com esses recursos. Selecione um tipo de instância com base nos requisitos da aplicação ou do software que você pretende executar.
+Quando se executa uma instância, o tipo de instância que é especificado determina o hardware do computador host usado para sua instância. Cada tipo de instância oferece recursos de computação, memória e armazenamento diferentes, além de ser agrupado em famílias de instâncias de acordo com esses recursos. É importante selecionar o tipo de instância com base nos requisitos da aplicação ou do software que você pretende executar.
 
 ![tipos-de-instancia](Images/Tipos-de-instancia.png)
 
@@ -335,7 +392,11 @@ Quando se executa uma instância, o tipo de instância que é especificado deter
 
 O [AWS Auto Scaling](https://aws.amazon.com/pt/autoscaling/) é um serviço da AWS para ajudar a otimizar o desempenho de aplicativos e reduzir custos de infraestrutura por meio da escalabilidade fácil e segura de vários recursos da AWS. Ele monitora os aplicativos e ajusta automaticamente a capacidade para manter um desempenho constante e previsível pelo menor custo possível.
 
-- [x] Escalabilidade automatizada;
+Principais características e conceitos:
+
+- [x] Escalabilidade Automática: Serviço que responde automaticamente a mudanças. Se a demanda aumentar, o ASG adiciona novas instâncias para lidar com o aumento da carga; se a demanda diminuir, ele remove instâncias extras para economizar custos.
 - [x] Realiza verificações de health check nas instâncias. Finaliza as instâncias não saudáveis (unhealthy) e inicia novas;
 - [x] Scale out (aumentar com a necessidade de demanda) e Scale in (diminuir quando a demanda deixa de ocorrer);
 - [x] Gratuito, paga apenas pelos recursos utilizados.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Auto Scaling Group é uma ferramenta que visa garantir que sua aplicação tenha capacidade suficiente para lidar com variações na demanda sem a necessidade de intervenção manual. Ele permite que o cliente configure e gerencie facilmente o dimensionamento automático das instâncias EC2, tornando a infraestrutura mais eficiente, escalável e resiliente. Com o ASG, você pode manter a disponibilidade e o desempenho da sua aplicação, independentemente das flutuações na demanda do usuário.
