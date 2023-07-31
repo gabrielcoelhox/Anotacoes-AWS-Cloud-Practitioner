@@ -244,7 +244,7 @@ A imagem a seguir mostra um exemplo simples de uma conta da AWS com três grupos
 
 ![aws-iam](Images/Exemplo-Grupo-IAM.png)
 
-**IAM MFA Overview (Autenticação Multifator)** - É um processo de autenticação complementar do login, que utiliza várias etapas que obriga o usuário a inserir informações que vão além de uma simples senha. 
+**IAM MFA Overview (Autenticação Multifator)** - É um processo de autenticação complementar do login, que utiliza várias etapas que obriga o usuário a inserir informações que vão além de uma simples senha.
 
 $\textcolor{salmon}{\textsf{Exemplo:}}$ Juntamente com a senha, os usuários podem ser solicitados a inserir um código que foi enviado para o e-mail deles, responder a uma pergunta secreta ou verificar uma impressão digital. Em caso de comprometimento de uma senha do sistema, uma segunda forma de autenticação pode ajudar a impedir o acesso não autorizado à conta.
 
@@ -256,6 +256,8 @@ Sim. Você pode habilitar e desabilitar as chaves de acesso de um usuário do IA
 Não, mas podem ser. Os nomes de usuário são apenas strings ASCII que são exclusivas dentro de uma determinada conta da AWS. Você pode atribuir nomes usando qualquer convenção de nomes que escolher, incluindo endereços de e-mail.
 3. **Posso definir uma política para as senhas dos meus usuários?**
 Sim, você pode aplicar senhas fortes, como senhas com comprimento mínimo, com pelo menos um número ou caractere especial. Você também pode aplicar expiração automática de senhas, impedir a reutilização de senhas antigas e exigir a redefinição da senha no próximo login na AWS.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O IAM é uma parte essencial da estratégia de segurança da AWS, permitindo que você proteja seus recursos e dados, gerencie as identidades que podem acessá-los e audite as atividades realizadas pelos usuários. Ao usar o IAM de forma adequada, você pode garantir que apenas as pessoas e processos autorizados tenham acesso aos recursos da AWS, reduzindo o risco de violações de segurança e garantindo a conformidade com os padrões regulatórios e de segurança.
 
 ## AWS WAF
 [INÍCIO](#id99)
