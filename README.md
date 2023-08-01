@@ -420,3 +420,51 @@ O [AWS Lambda](https://aws.amazon.com/pt/lambda/) é um serviço de computação
 **Custo Efetivo:** O Lambda é cobrado pelo tempo de execução real das funções, com uma quantidade gratuita de execuções e recursos disponíveis para começar. Como você paga apenas pelas invocações das funções e pela quantidade de recursos consumidos durante a execução, o Lambda pode ser uma opção de custo efetivo para muitos casos de uso.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O AWS Lambda é uma ferramenta para a criação de aplicações escaláveis, altamente disponíveis e sem servidor. Ele permite que os desenvolvedores criem microsserviços e funções que respondam a eventos específicos, sem a necessidade de gerenciar a infraestrutura subjacente. Com o Lambda, você pode se concentrar no desenvolvimento do código e criar soluções ágeis, reativas e prontas para a nuvem.
+
+## <a id="id8"> Elastic Beanstalk</a>
+[INÍCIO](#id99)
+
+O [AWS Elastic Beanstalk](https://aws.amazon.com/pt/elasticbeanstalk/) é um serviço que simplifica o processo de implantação, gerenciamento e escalabilidade de aplicativos e serviços na nuvem. Ele permite que desenvolvedores e equipes de operações implantem facilmente suas aplicações web e APIs em ambientes altamente disponíveis, sem se preocupar com a complexidade da infraestrutura subjacente.
+
+![AWS-Elastic-Beanstalk](Images/aws-elastic-beanstalk.png)
+
+Principais características e conceitos do AWS Elastic Beanstalk:
+
+**Ambientes:** O Elastic Beanstalk suporta diferentes ambientes, como ambientes para aplicações web e ambientes de trabalhadores para processamento de tarefas em segundo plano. Cada ambiente é uma coleção de recursos da AWS, incluindo instâncias EC2, balanceadores de carga, grupos de auto scaling, entre outros, necessários para executar e escalonar o aplicativo.
+
+**Linguagens de Programação:** O Elastic Beanstalk suporta várias linguagens de programação populares, incluindo Node.js, Python, Java, Ruby, PHP, .NET e Go. Isso permite que você desenvolva e implante aplicações em sua linguagem preferida.
+
+**Infraestrutura Gerenciada:** O Elastic Beanstalk gerencia automaticamente a infraestrutura subjacente, incluindo provisionamento e configuração de recursos da AWS, balanceamento de carga, dimensionamento automático, monitoramento e recuperação de falhas. Isso permite que você se concentre no desenvolvimento do aplicativo e na lógica de negócios, em vez de preocupar-se com a configuração e gerenciamento da infraestrutura.
+
+**Versionamento e Implantação:** O Elastic Beanstalk facilita a implantação de novas versões do seu aplicativo. Você pode fazer o upload de um novo pacote de aplicativo ou integra-lo a serviços de controle de versão, como o Git, e o Elastic Beanstalk cuidará da implantação e do balanceamento de carga entre as diferentes versões.
+
+**Personalização e Controle:** Apesar de gerenciar a infraestrutura automaticamente, o Elastic Beanstalk oferece a flexibilidade de personalizar configurações e recursos da AWS, permitindo que você defina políticas de auto scaling, configure variáveis de ambiente, faça ajustes de performance e muito mais.
+
+**Integração com Outros Serviços AWS:** O Elastic Beanstalk é compatível com uma ampla gama de serviços AWS, como o Amazon RDS (Relational Database Service), Amazon S3 (Simple Storage Service), Amazon CloudWatch para monitoramento e muitos outros, permitindo que você crie aplicativos altamente integrados e resilientes.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O AWS Elastic Beanstalk é uma excelente opção para desenvolvedores que desejam implantar aplicativos web e APIs rapidamente, sem lidar diretamente com as complexidades da infraestrutura em nuvem. Ele combina facilidade de uso com flexibilidade e escalabilidade, permitindo que você aumente ou diminua a escala do seu aplicativo conforme a demanda do usuário. Ao automatizar muitos aspectos do gerenciamento da infraestrutura, o Elastic Beanstalk permite que as equipes se concentrem na criação de código e na entrega de valor aos usuários finais.
+
+## <a id="id9"> AWS Lightsail</a>
+[INÍCIO](#id99)
+
+O [AWS Lightsail](https://aws.amazon.com/pt/lightsail/) é um serviço de hospedagem e computação simplificado que fornece uma maneira fácil e rápida para iniciar, gerenciar e dimensionar aplicações e sites na nuvem. É uma opção ideal para desenvolvedores, equipes de pequeno porte e iniciantes que buscam uma solução de hospedagem com recursos previsíveis e sem a complexidade de outros serviços da AWS.
+
+![AWS-Lightsail](Images/aws-lightsail.png)
+
+Principais características e conceitos do AWS Lightsail:
+
+**Instâncias Pré-configuradas:** O Lightsail oferece instâncias pré-configuradas, que são pacotes de recursos de computação, memória, armazenamento e largura de banda projetados para diferentes cargas de trabalho, como sites, blogs, aplicativos web e bancos de dados.
+
+**Fácil Implantação:** Com o Lightsail, você pode lançar rapidamente uma instância pré-configurada com apenas alguns cliques no console da AWS ou usando a interface da linha de comando. Isso torna a implantação de aplicações web e sites uma tarefa simples, mesmo para usuários sem muita experiência em nuvem.
+
+**Opções de Sistema Operacional:** O Lightsail oferece uma variedade de sistemas operacionais, como Amazon Linux, Ubuntu, Windows e outros, permitindo que você escolha a plataforma mais adequada para suas necessidades.
+
+**Backup Automático:** O Lightsail oferece opções de backup automáticos, permitindo que você programe backups diários, semanais ou mensais para proteger seus dados e facilitar a recuperação em caso de perda de informações.
+
+**Integração com Outros Serviços AWS:** Embora o Lightsail seja uma solução simplificada, ele ainda pode ser integrado com outros serviços da AWS, como o Amazon RDS (Relational Database Service), o Amazon S3 (Simple Storage Service) e o Amazon CloudFront, para aumentar a funcionalidade e o desempenho de suas aplicações.
+
+**Dimensionamento Fácil:** O Lightsail permite que você dimensione verticalmente suas instâncias (aumentando recursos) ou adicione mais instâncias, tornando o dimensionamento de sua aplicação uma tarefa simples e rápida.
+
+**Preços Previsíveis:** O modelo de preços do Lightsail é transparente e previsível, com planos fixos que incluem recursos específicos, permitindo que você saiba exatamente o que será cobrado e evitando surpresas na fatura.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O AWS Lightsail é uma excelente escolha para desenvolvedores e pequenas empresas que desejam uma solução de hospedagem simples, acessível e fácil de usar na nuvem da AWS. Com recursos pré-configurados e preço transparente, o Lightsail simplifica o processo de hospedar aplicações e sites, permitindo que você se concentre no desenvolvimento e no crescimento do seu negócio, sem se preocupar com a complexidade da infraestrutura em nuvem.
