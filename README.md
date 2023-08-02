@@ -321,7 +321,7 @@ O [Amazon Cognito](https://aws.amazon.com/pt/cognito/) é um serviço que facili
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon Cognito é uma excelente escolha para adicionar funcionalidades de autenticação e gerenciamento de usuários a suas aplicações. Ele é altamente escalável, seguro e fornece uma série de recursos prontos para uso, permitindo que o cliente crie uma experiência de autenticação e autorização confiável para seus usuários sem a necessidade de desenvolver tudo do zero.
 
-## <a id="id5"> EC2
+## <a id="id5"> Amazon EC2
 [INÍCIO](#id99)
 
 O [Amazon **E**lastic **C**ompute **C**loud (EC2)](https://aws.amazon.com/pt/ec2/) oferece uma capacidade de computação escalável na Nuvem da AWS. É uma solução que facilita a obtenção de servidores virtuais, também conhecidos como instâncias de computadores na nuvem. O seu uso elimina a necessidade de investir em hardware inicialmente, portanto, você pode desenvolver e implantar aplicativos com mais rapidez.
@@ -444,10 +444,10 @@ Principais características e conceitos do AWS Elastic Beanstalk:
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O AWS Elastic Beanstalk é uma excelente opção para desenvolvedores que desejam implantar aplicativos web e APIs rapidamente, sem lidar diretamente com as complexidades da infraestrutura em nuvem. Ele combina facilidade de uso com flexibilidade e escalabilidade, permitindo que você aumente ou diminua a escala do seu aplicativo conforme a demanda do usuário. Ao automatizar muitos aspectos do gerenciamento da infraestrutura, o Elastic Beanstalk permite que as equipes se concentrem na criação de código e na entrega de valor aos usuários finais.
 
-## <a id="id9"> AWS Lightsail</a>
+## <a id="id9"> Amazon Lightsail</a>
 [INÍCIO](#id99)
 
-O [AWS Lightsail](https://aws.amazon.com/pt/lightsail/) é um serviço de hospedagem e computação simplificado que fornece uma maneira fácil e rápida para iniciar, gerenciar e dimensionar aplicações e sites na nuvem. É uma opção ideal para desenvolvedores, equipes de pequeno porte e iniciantes que buscam uma solução de hospedagem com recursos previsíveis e sem a complexidade de outros serviços da AWS.
+O [Amazon Lightsail](https://aws.amazon.com/pt/lightsail/) é um serviço de hospedagem e computação simplificado que fornece uma maneira fácil e rápida para iniciar, gerenciar e dimensionar aplicações e sites na nuvem. É uma opção ideal para desenvolvedores, equipes de pequeno porte e iniciantes que buscam uma solução de hospedagem com recursos previsíveis e sem a complexidade de outros serviços da AWS.
 
 ![AWS-Lightsail](Images/aws-lightsail.png)
 
@@ -468,3 +468,32 @@ Principais características e conceitos do AWS Lightsail:
 **Preços Previsíveis:** O modelo de preços do Lightsail é transparente e previsível, com planos fixos que incluem recursos específicos, permitindo que você saiba exatamente o que será cobrado e evitando surpresas na fatura.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O AWS Lightsail é uma excelente escolha para desenvolvedores e pequenas empresas que desejam uma solução de hospedagem simples, acessível e fácil de usar na nuvem da AWS. Com recursos pré-configurados e preço transparente, o Lightsail simplifica o processo de hospedar aplicações e sites, permitindo que você se concentre no desenvolvimento e no crescimento do seu negócio, sem se preocupar com a complexidade da infraestrutura em nuvem.
+
+## <a id="id10"> Amazon S3</a>
+[INÍCIO](#id99)
+
+O [Amazon S3](https://aws.amazon.com/pt/s3/) (Simple Storage Service) é um serviço de armazenamento e recuperação de objetos altamente escalável e durável. Ele é projetado para armazenar e recuperar grandes quantidades de dados de forma segura, escalável e altamente disponível, além de fornecer durabilidade de 99,999999999% (onze noves) o que significa que seus dados são extremamente resilientes contra falhas. O S3 é amplamente utilizado por empresas em todo o mundo para armazenar e distribuir diversos tipos de dados, como arquivos de mídia, backups, documentos, logs, bancos de dados e muito mais.
+
+Principais características e conceitos do Amazon S3:
+
+**Buckets:** O Amazon S3 organiza os dados em "buckets" (ou "baldes"), que são contêineres de alto nível que pode conter um número ilimitado de objetos e é usado para definir a propriedade e as configurações de acesso aos objetos armazenados. Os buckets são criados em regiões específicas da AWS e têm um nome exclusivo globalmente.
+
+**Objetos:** Um objeto é a unidade fundamental de armazenamento no S3. Pode ser qualquer tipo de arquivo, como uma imagem, vídeo, arquivo de texto, código executável etc. Cada objeto é associado a uma chave única dentro de um bucket, que é usada para acessá-lo.
+
+![S3-Bucket-Objetos](Images/s3-buckets-e-objetos.png)
+
+**URLs e Acesso:** Cada objeto no S3 é acessível por meio de uma URL exclusiva, que geralmente segue o padrão https://s3.amazonaws.com/nome-do-bucket/caminho-para-o-objeto. Você pode configurar as permissões de acesso para os objetos e os buckets usando as políticas de controle de acesso do S3 (IAM) para garantir que apenas usuários autorizados tenham acesso aos dados.
+
+![OrdemUrl-S3](Images/OrdemUrl-S3.png)
+
+**Armazenamento Classes:** O S3 oferece diferentes classes de armazenamento para atender a requisitos de desempenho e custo. As classes mais comuns são:
+
+- Standard: Para acesso frequente a dados.
+- Intelligent-Tiering: Para dados com padrões de acesso variados.
+- Glacier: Para armazenamento de backup e arquivamento de longo prazo.
+
+**Controle de Acesso:** O S3 permite que você defina políticas de controle de acesso granular usando o AWS Identity and Access Management (IAM) para conceder permissões específicas a usuários, grupos ou funções.
+
+**Integração com outros serviços:** O S3 pode ser facilmente integrado a outros serviços da AWS, como o Amazon CloudFront para entrega de conteúdo (CDN), o Amazon Athena para análise de dados, entre outros.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon S3 é amplamente utilizado por empresas e desenvolvedores de todos os tamanhos para armazenar, proteger e compartilhar dados na nuvem. Com sua alta durabilidade, escalabilidade e recursos avançados de controle de acesso, o S3 é uma solução robusta e confiável para armazenamento de objetos, fornecendo a base para muitos aplicativos, sites e serviços na nuvem da AWS.
