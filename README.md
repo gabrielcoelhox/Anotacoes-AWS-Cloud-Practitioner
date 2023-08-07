@@ -252,8 +252,10 @@ $\textcolor{salmon}{\textsf{FAQ:}}$
 
 1. **Posso habilitar e desabilitar o acesso de um usuário?**
 Sim. Você pode habilitar e desabilitar as chaves de acesso de um usuário do IAM por meio de APIs do IAM, da CLI da AWS ou do console do IAM. Se você desabilitar as chaves de acesso, o usuário não poderá acessar programaticamente os serviços da AWS.
+</br>
 2. **Os nomes de usuários do IAM têm de ser endereços de e-mail?**
 Não, mas podem ser. Os nomes de usuário são apenas strings ASCII que são exclusivas dentro de uma determinada conta da AWS. Você pode atribuir nomes usando qualquer convenção de nomes que escolher, incluindo endereços de e-mail.
+</br>
 3. **Posso definir uma política para as senhas dos meus usuários?**
 Sim, você pode aplicar senhas fortes, como senhas com comprimento mínimo, com pelo menos um número ou caractere especial. Você também pode aplicar expiração automática de senhas, impedir a reutilização de senhas antigas e exigir a redefinição da senha no próximo login na AWS.
 
@@ -496,8 +498,6 @@ Principais características e conceitos do Amazon S3:
 
 **Integração com outros serviços:** O S3 pode ser facilmente integrado a outros serviços da AWS, como o Amazon CloudFront para entrega de conteúdo (CDN), o Amazon Athena para análise de dados, entre outros.
 
-$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon S3 é amplamente utilizado por empresas e desenvolvedores de todos os tamanhos para armazenar, proteger e compartilhar dados na nuvem. Com sua alta durabilidade, escalabilidade e recursos avançados de controle de acesso, o S3 é uma solução robusta e confiável para armazenamento de objetos, fornecendo a base para muitos aplicativos, sites e serviços na nuvem da AWS.
-
 ### Categorias de Armazenamento
 
 O Amazon S3 oferece diferentes categorias de armazenamento para atender a diferentes requisitos de desempenho, disponibilidade e custo. Cada categoria de armazenamento é otimizada para cenários específicos e oferece uma combinação diferente de durabilidade, disponibilidade e custo.
@@ -532,3 +532,46 @@ Abaixo estão as principais categorias de armazenamento do Amazon S3:
   - Os dados armazenados aqui têm tempos de recuperação mais longos e são adequados para cenários em que a recuperação imediata não é uma prioridade.
 
 Ao escolher uma categoria de armazenamento do Amazon S3, é importante considerar os requisitos de desempenho, disponibilidade, durabilidade e custo dos seus dados. As diferentes classes de armazenamento permitem que você otimize os custos, selecionando a categoria que melhor se adapta ao comportamento de acesso dos seus objetos.
+
+$\textcolor{salmon}{\textsf{FAQ:}}$
+
+1. **O que é o Amazon S3?**
+O Amazon S3 é um armazenamento de objetos criado para armazenar e recuperar qualquer quantidade de dados de qualquer local na Internet. Ele é um serviço de armazenamento simples que oferece uma infraestrutura de armazenamento de dados com escalabilidade infinita a um custo bastante reduzido.
+</br>
+2. **O que posso fazer com o Amazon S3?**
+O Amazon S3 disponibiliza uma interface de serviço da Web simples que pode ser usada para armazenar e recuperar qualquer quantidade de dados, a qualquer momento, de qualquer lugar na Web. Como o Amazon S3 é altamente escalável e você só paga pelo que usa, é possível começar com um porte reduzido e expandir o aplicativo da forma desejada, sem comprometer o desempenho ou a confiabilidade.
+</br>
+3. **Quais tipos de dados eu posso armazenar no Amazon S3?**
+Você pode armazenar praticamente qualquer tipo de dados em qualquer formato.
+</br>
+4. **Qual quantidade de dados é possível armazenar no Amazon S3?**
+O volume total de dados e o número de objetos que você pode armazenar são ilimitados. Objetos individuais do Amazon S3 podem variar em tamanho, desde um mínimo de 0 byte até um máximo de 5 terabytes.
+
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon S3 é amplamente utilizado por empresas e desenvolvedores de todos os tamanhos para armazenar, proteger e compartilhar dados na nuvem. Com sua alta durabilidade, escalabilidade e recursos avançados de controle de acesso, o S3 é uma solução robusta e confiável para armazenamento de objetos, fornecendo a base para muitos aplicativos, sites e serviços na nuvem da AWS.
+
+## <a id="id11"> Amazon EBS</a>
+[INÍCIO](#id99)
+
+O [Amazon Elastic Block Store (EBS)](https://aws.amazon.com/pt/ebs/) permite que você crie volumes de armazenamento persistentes e anexáveis a instâncias do Amazon EC2, fornecendo armazenamento de alto desempenho para suas aplicações.
+
+Principais características e conceitos do Amazon EBS:
+
+**Volumes de EBS:** Os volumes de EBS são unidades de armazenamento que podem ser anexadas às instâncias EC2. Eles são usados para armazenar dados, sistemas de arquivos, bancos de dados e qualquer outro tipo de conteúdo que exija armazenamento persistente.
+
+**Tipos de Volumes:** O EBS oferece diferentes tipos de volumes, cada um otimizado para diferentes casos de uso:
+
+  - SSD (Solid State Drive): Volumes de estado sólido que oferecem alto desempenho, como o tipo gp2 (General Purpose SSD) e io2 (Provisioned IOPS SSD).
+  - HDD (Hard Disk Drive): Volumes magnéticos que oferecem capacidade econômica, como o tipo st1 (Throughput Optimized HDD) e sc1 (Cold HDD).
+
+**Persistência:** Os volumes de EBS são persistentes, o que significa que os dados persistem mesmo depois de a instância EC2 ser desligada ou encerrada. Isso é crucial para armazenar dados de aplicativos que precisam ser mantidos entre as reinicializações.
+
+**Snapshots:** Os snapshots são cópias incrementais dos volumes de EBS, permitindo criar backups dos dados. Eles são armazenados no Amazon S3 e podem ser usados para restaurar ou criar novos volumes a partir dos dados do snapshot.
+
+**Alta Disponibilidade:** O EBS oferece replicação automatizada de volumes dentro de uma Zona de Disponibilidade (AZ), garantindo alta disponibilidade e tolerância a falhas. Você também pode criar réplicas entre várias AZs.
+
+**Desempenho Dimensionável:** Muitos tipos de volumes de EBS oferecem desempenho escalável. Você pode provisionar IOPS (operações de entrada/saída por segundo) para volumes io2, por exemplo, para atender a cargas de trabalho intensivas em I/O.
+
+**Dimensionamento:** Você pode redimensionar (aumentar ou diminuir) o tamanho de um volume de EBS enquanto ele está em uso, permitindo ajustar a capacidade de armazenamento sem interromper as operações.
+
+**Uso com Instâncias EC2:** Os volumes de EBS são projetados para serem usados com instâncias EC2. Você pode anexar e desanexar volumes conforme necessário e transferi-los entre instâncias.
