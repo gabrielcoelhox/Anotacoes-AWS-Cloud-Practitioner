@@ -1,5 +1,5 @@
 # <p align="center"> <a id="id99"> :cloud: AWS Cloud Practitioner :cloud: </p>
-<p align="center"> 💻 Atualizado em 20 de Julho de 2023 💻</p>
+<p align="center"> 💻 Atualizado em 07 de Agosto de 2023 💻</p>
 
 Repositório destinado a anotações de estudo para a prova de certificação **AWS Cloud Practitioner (CLF-C01)**.
 
@@ -497,3 +497,38 @@ Principais características e conceitos do Amazon S3:
 **Integração com outros serviços:** O S3 pode ser facilmente integrado a outros serviços da AWS, como o Amazon CloudFront para entrega de conteúdo (CDN), o Amazon Athena para análise de dados, entre outros.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon S3 é amplamente utilizado por empresas e desenvolvedores de todos os tamanhos para armazenar, proteger e compartilhar dados na nuvem. Com sua alta durabilidade, escalabilidade e recursos avançados de controle de acesso, o S3 é uma solução robusta e confiável para armazenamento de objetos, fornecendo a base para muitos aplicativos, sites e serviços na nuvem da AWS.
+
+### Categorias de Armazenamento
+
+O Amazon S3 oferece diferentes categorias de armazenamento para atender a diferentes requisitos de desempenho, disponibilidade e custo. Cada categoria de armazenamento é otimizada para cenários específicos e oferece uma combinação diferente de durabilidade, disponibilidade e custo.
+
+Abaixo estão as principais categorias de armazenamento do Amazon S3:
+
+![categorias-de-armazenamento](Images/s3-categorias-de-armazenamento.png)
+
+- **S3 Standard:**
+  - O Standard é a classe de armazenamento padrão do Amazon S3 e é projetado para alto desempenho, durabilidade e disponibilidade;
+  - Os dados armazenados nessa classe são replicados automaticamente em várias Zonas de Disponibilidade (AZs), tornando-o altamente resiliente a falhas;
+  - É adequado para uma ampla gama de casos de uso, como armazenamento de dados ativos, backup, compartilhamento de conteúdo e hospedagem de sites.
+
+- **S3 Intelligent-Tiering:**
+  - Oferece uma maneira automatizada de otimizar custos, movendo automaticamente os objetos entre as classes Standard e Infrequent Access (IA) com base nos padrões de acesso;
+  - Objetos que são frequentemente acessados permanecem na classe Standard, enquanto objetos menos acessados são movidos para a classe IA, economizando custos.
+
+- **S3 Standard-Infrequent Access (S3 Standard-IA):**
+  - É adequada para objetos que são acessados com menos frequência, mas ainda requerem alta durabilidade e disponibilidade;
+  - Os objetos armazenados nessa classe têm um custo mais baixo em comparação com o S3 Standard, mas há uma taxa de recuperação associada ao acesso a esses objetos.
+
+- **S3 One Zone-IA:**
+  - É semelhante à classe IA, mas armazena os dados em uma única Zona de Disponibilidade, em vez de múltiplas;
+  - É uma opção mais econômica, mas menos resiliente em comparação com outras classes, adequada para dados que podem ser recriados facilmente ou não são críticos.
+
+- **S3 Glacier:**
+  - É projetada para arquivamento de dados de longo prazo, com recuperação eventual;
+  - Os dados são armazenados em instâncias Glacier, que oferecem uma durabilidade excepcional, mas têm um tempo de recuperação maior.
+
+- **S3 Glacier Deep Archive:**
+  - É a opção mais econômica do S3 e é projetada para arquivamento de dados que raramente precisam ser acessados;
+  - Os dados armazenados aqui têm tempos de recuperação mais longos e são adequados para cenários em que a recuperação imediata não é uma prioridade.
+
+Ao escolher uma categoria de armazenamento do Amazon S3, é importante considerar os requisitos de desempenho, disponibilidade, durabilidade e custo dos seus dados. As diferentes classes de armazenamento permitem que você otimize os custos, selecionando a categoria que melhor se adapta ao comportamento de acesso dos seus objetos.
