@@ -547,7 +547,6 @@ Você pode armazenar praticamente qualquer tipo de dados em qualquer formato.
 4. **Qual quantidade de dados é possível armazenar no Amazon S3?**
 O volume total de dados e o número de objetos que você pode armazenar são ilimitados. Objetos individuais do Amazon S3 podem variar em tamanho, desde um mínimo de 0 byte até um máximo de 5 terabytes.
 
-
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon S3 é amplamente utilizado por empresas e desenvolvedores de todos os tamanhos para armazenar, proteger e compartilhar dados na nuvem. Com sua alta durabilidade, escalabilidade e recursos avançados de controle de acesso, o S3 é uma solução robusta e confiável para armazenamento de objetos, fornecendo a base para muitos aplicativos, sites e serviços na nuvem da AWS.
 
 ## <a id="id11"> Amazon EBS</a>
@@ -575,3 +574,28 @@ Principais características e conceitos do Amazon EBS:
 **Dimensionamento:** Você pode redimensionar (aumentar ou diminuir) o tamanho de um volume de EBS enquanto ele está em uso, permitindo ajustar a capacidade de armazenamento sem interromper as operações.
 
 **Uso com Instâncias EC2:** Os volumes de EBS são projetados para serem usados com instâncias EC2. Você pode anexar e desanexar volumes conforme necessário e transferi-los entre instâncias.
+
+## <a id="id12"> Amazon EFS</a>
+[INÍCIO](#id99)
+
+O [Amazon Elastic File System (Amazon EFS)](https://aws.amazon.com/pt/efs/) é um serviço de armazenamento de arquivos altamente escalável e gerenciado oferecido pela Amazon Web Services (AWS). Ele fornece um sistema de arquivos compartilhado que pode ser acessado por várias instâncias EC2 simultaneamente, permitindo que você compartilhe e acesse dados entre instâncias de maneira eficiente.
+
+Principais características e conceitos do Amazon EFS:
+
+**Sistema de Arquivos Compartilhado:** O EFS oferece um sistema de arquivos que pode ser montado e compartilhado entre várias instâncias EC2 em uma mesma VPC (Virtual Private Cloud) ou mesmo entre diferentes VPCs usando o VPC Peering.
+
+**Escalabilidade Automática:** O EFS é altamente escalável e ajusta automaticamente a capacidade de armazenamento e o throughput à medida que você adiciona ou remove arquivos. Isso elimina a necessidade de provisionamento manual.
+
+**Disponibilidade e Durabilidade:** Os dados armazenados no Amazon EFS são automaticamente replicados em várias Zonas de Disponibilidade (AZs) dentro de uma região, garantindo alta disponibilidade e durabilidade.
+
+**Acesso Simultâneo:** O EFS permite que várias instâncias EC2 acessem o mesmo sistema de arquivos ao mesmo tempo, facilitando o compartilhamento de dados entre instâncias em um ambiente de cluster ou aplicativo distribuído.
+
+**Desempenho Dimensionável:** O EFS oferece opções de desempenho configuráveis para se adequar às necessidades da sua aplicação. Você pode escolher entre diferentes modos de desempenho, como o modo Padrão ou o modo Max I/O, dependendo das cargas de trabalho.
+
+**Acessos de Leitura e Escrita:** O EFS suporta acesso de leitura e escrita simultâneo, permitindo que várias instâncias acessem e modifiquem os mesmos arquivos ao mesmo tempo.
+
+**Custo Efetivo:** O modelo de preços do Amazon EFS é baseado no armazenamento utilizado, sem taxas adicionais por acesso ou transferência de dados. Isso torna o EFS uma opção econômica para compartilhar dados entre instâncias EC2.
+
+**Suporte a Soft Links e Permissões:** O EFS suporta recursos como soft links, permissões de acesso POSIX e outras funcionalidades de sistemas de arquivos padrão.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon EFS é particularmente útil em cenários onde várias instâncias EC2 precisam compartilhar dados, como aplicativos de conteúdo, análise de dados distribuída, processamento de lotes e muito mais. Ele simplifica o gerenciamento de armazenamento compartilhado, eliminando a necessidade de configurar servidores de arquivos dedicados e permitindo que as instâncias acessem dados de maneira eficiente e escalável.
