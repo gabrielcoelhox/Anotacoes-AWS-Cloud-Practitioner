@@ -537,7 +537,6 @@ Abaixo estão as principais categorias de armazenamento do Amazon S3:
   - Os dados armazenados aqui têm tempos de recuperação mais longos e são adequados para cenários em que a recuperação imediata não é uma prioridade.
 
 Ao escolher uma categoria de armazenamento do Amazon S3, é importante considerar os requisitos de desempenho, disponibilidade, durabilidade e custo dos seus dados. As diferentes classes de armazenamento permitem que você otimize os custos, selecionando a categoria que melhor se adapta ao comportamento de acesso dos seus objetos.
-
 <details>
   <summary><strong><h4>Perguntas Frequentes</h4></strong></summary>
 
@@ -616,6 +615,8 @@ $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon EFS é particularmente útil em 
 
 O [Amazon S3 Glacier](https://aws.amazon.com/pt/s3/storage-classes/glacier/) é um serviço projetado para armazenar dados que são raramente acessados e podem ser arquivados por um longo período, oferecendo uma solução econômica para retenção de dados a longo prazo e conformidade regulatória.
 
+![Aws-Glacier](Images/aws-glacier.png)
+
 Principais características e conceitos do Amazon S3 Glacier:
 
 **Arquivamento de Longo Prazo:** O S3 Glacier é ideal para armazenar dados que precisam ser retidos por um longo período, como registros históricos, backups, arquivos de auditoria, dados regulatórios e similares.
@@ -625,7 +626,6 @@ Principais características e conceitos do Amazon S3 Glacier:
 **Políticas de Retenção:** Você pode criar políticas de retenção que definem quanto tempo os dados devem ser mantidos no S3 Glacier. Isso ajuda a cumprir requisitos regulatórios e a garantir que os dados sejam mantidos pelo tempo necessário
 
 **Preços Econômicos:** O S3 Glacier é uma opção econômica para armazenar grandes volumes de dados que raramente são acessados. No entanto, lembre-se de que as taxas de recuperação de dados podem variar com base na opção de recuperação selecionada.
-
 <details>
   <summary><strong><h4>Perguntas Frequentes</h4></strong></summary>
   
@@ -656,7 +656,26 @@ O Amazon S3 Glacier foi projetado para casos de uso em que os dados são retidos
 7. **Como posso recuperar os dados do serviço?**
 
 Quando você faz uma solicitação para recuperar dados do S3 Glacier, inicia um trabalho de recuperação para um arquivo. Depois que o trabalho de recuperação for concluído, seus dados estarão disponíveis para download ou acesso por 24 horas.
-
 </details>
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon S3 Glacier é útil para organizações que precisam arquivar e reter dados a longo prazo por razões de conformidade, regulamentação ou histórico. Embora a recuperação de dados possa levar algum tempo, o serviço oferece uma maneira eficiente e econômica de manter dados valiosos ao longo do tempo sem ocupar espaço em armazenamento ativo mais caro.
+
+## <a id="id13"> AWS Snow Family</a>
+[INÍCIO](#id99)
+
+A [família AWS Snow](https://aws.amazon.com/pt/snow/) é uma série de dispositivos físicos oferecidos pela AWS que permitem transferir grandes volumes de dados para e da nuvem de maneira eficiente, especialmente em situações em que a transferência pela internet não é prática devido a limitações de largura de banda, segurança ou outras considerações.
+
+![Snow-family](Images/aws-snow-family.png)
+![Aws-Snow](Images/aws-snow.png)
+
+Existem vários dispositivos na família AWS Snow:
+
+**AWS Snowcone:** É o menor dispositivo da família Snow e foi projetado para casos em que há espaço limitado para instalação ou para coletar dados em locais remotos. O Snowcone é resistente, seguro e pode ser usado em ambientes externos. Ele é conectado à rede local para copiar e transferir dados.
+
+**AWS Snowball:** O Snowball é um dispositivo maior e mais poderoso, projetado para transferir grandes volumes de dados para a nuvem. Ele está disponível em versões com capacidades de armazenamento variando de 50 terabytes a 80 terabytes (ou até 42 petabytes com a Snowball Edge). O Snowball pode ser solicitado e enviado para o local onde os dados estão armazenados para realizar transferências rápidas e seguras.
+
+**AWS Snowball Edge:** O Snowball Edge é uma evolução do Snowball, projetada não apenas para transferir dados, mas também para realizar processamento de dados no local. Ele pode ser usado para executar instâncias do Amazon EC2, executar funções do AWS Lambda, executar análises de dados e muito mais. O Snowball Edge oferece capacidades de armazenamento ainda maiores, juntamente com recursos de processamento e armazenamento de blocos.
+
+**AWS Snowmobile:** O Snowmobile é uma opção para transferências de dados em larga escala que envolve literalmente um caminhão. É um contêiner móvel que pode transportar até 100 petabytes de dados. Ele é entregue no local, os dados são transferidos diretamente para o Snowmobile e depois transportados de volta para um data center da AWS.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ Esses dispositivos são projetados para permitir que as organizações superem desafios relacionados à transferência de grandes volumes de dados para a nuvem, especialmente quando a largura de banda da internet não é suficiente ou quando a segurança é uma preocupação. Eles oferecem uma maneira eficiente e segura de mover dados para a nuvem AWS, permitindo que as empresas aproveitem os benefícios da computação em nuvem sem as limitações da transferência convencional de dados pela internet.
