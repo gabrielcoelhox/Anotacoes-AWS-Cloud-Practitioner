@@ -248,16 +248,21 @@ A imagem a seguir mostra um exemplo simples de uma conta da AWS com três grupos
 
 $\textcolor{salmon}{\textsf{Exemplo:}}$ Juntamente com a senha, os usuários podem ser solicitados a inserir um código que foi enviado para o e-mail deles, responder a uma pergunta secreta ou verificar uma impressão digital. Em caso de comprometimento de uma senha do sistema, uma segunda forma de autenticação pode ajudar a impedir o acesso não autorizado à conta.
 
-$\textcolor{salmon}{\textsf{FAQ:}}$
+<details>
+  <summary><strong><h4>Perguntas Frequentes</h4></strong></summary>
 
 1. **Posso habilitar e desabilitar o acesso de um usuário?**
+
 Sim. Você pode habilitar e desabilitar as chaves de acesso de um usuário do IAM por meio de APIs do IAM, da CLI da AWS ou do console do IAM. Se você desabilitar as chaves de acesso, o usuário não poderá acessar programaticamente os serviços da AWS.
-</br>
+
 2. **Os nomes de usuários do IAM têm de ser endereços de e-mail?**
+
 Não, mas podem ser. Os nomes de usuário são apenas strings ASCII que são exclusivas dentro de uma determinada conta da AWS. Você pode atribuir nomes usando qualquer convenção de nomes que escolher, incluindo endereços de e-mail.
-</br>
+
 3. **Posso definir uma política para as senhas dos meus usuários?**
+
 Sim, você pode aplicar senhas fortes, como senhas com comprimento mínimo, com pelo menos um número ou caractere especial. Você também pode aplicar expiração automática de senhas, impedir a reutilização de senhas antigas e exigir a redefinição da senha no próximo login na AWS.
+</details>
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O IAM é uma parte essencial da estratégia de segurança da AWS, permitindo que você proteja seus recursos e dados, gerencie as identidades que podem acessá-los e audite as atividades realizadas pelos usuários. Ao usar o IAM de forma adequada, você pode garantir que apenas as pessoas e processos autorizados tenham acesso aos recursos da AWS, reduzindo o risco de violações de segurança e garantindo a conformidade com os padrões regulatórios e de segurança.
 
@@ -533,19 +538,25 @@ Abaixo estão as principais categorias de armazenamento do Amazon S3:
 
 Ao escolher uma categoria de armazenamento do Amazon S3, é importante considerar os requisitos de desempenho, disponibilidade, durabilidade e custo dos seus dados. As diferentes classes de armazenamento permitem que você otimize os custos, selecionando a categoria que melhor se adapta ao comportamento de acesso dos seus objetos.
 
-$\textcolor{salmon}{\textsf{FAQ:}}$
+<details>
+  <summary><strong><h4>Perguntas Frequentes</h4></strong></summary>
 
 1. **O que é o Amazon S3?**
+
 O Amazon S3 é um armazenamento de objetos criado para armazenar e recuperar qualquer quantidade de dados de qualquer local na Internet. Ele é um serviço de armazenamento simples que oferece uma infraestrutura de armazenamento de dados com escalabilidade infinita a um custo bastante reduzido.
-</br>
+
 2. **O que posso fazer com o Amazon S3?**
+
 O Amazon S3 disponibiliza uma interface de serviço da Web simples que pode ser usada para armazenar e recuperar qualquer quantidade de dados, a qualquer momento, de qualquer lugar na Web. Como o Amazon S3 é altamente escalável e você só paga pelo que usa, é possível começar com um porte reduzido e expandir o aplicativo da forma desejada, sem comprometer o desempenho ou a confiabilidade.
-</br>
+
 3. **Quais tipos de dados eu posso armazenar no Amazon S3?**
+
 Você pode armazenar praticamente qualquer tipo de dados em qualquer formato.
-</br>
+
 4. **Qual quantidade de dados é possível armazenar no Amazon S3?**
+
 O volume total de dados e o número de objetos que você pode armazenar são ilimitados. Objetos individuais do Amazon S3 podem variar em tamanho, desde um mínimo de 0 byte até um máximo de 5 terabytes.
+</details>
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon S3 é amplamente utilizado por empresas e desenvolvedores de todos os tamanhos para armazenar, proteger e compartilhar dados na nuvem. Com sua alta durabilidade, escalabilidade e recursos avançados de controle de acesso, o S3 é uma solução robusta e confiável para armazenamento de objetos, fornecendo a base para muitos aplicativos, sites e serviços na nuvem da AWS.
 
@@ -599,3 +610,53 @@ Principais características e conceitos do Amazon EFS:
 **Suporte a Soft Links e Permissões:** O EFS suporta recursos como soft links, permissões de acesso POSIX e outras funcionalidades de sistemas de arquivos padrão.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon EFS é particularmente útil em cenários onde várias instâncias EC2 precisam compartilhar dados, como aplicativos de conteúdo, análise de dados distribuída, processamento de lotes e muito mais. Ele simplifica o gerenciamento de armazenamento compartilhado, eliminando a necessidade de configurar servidores de arquivos dedicados e permitindo que as instâncias acessem dados de maneira eficiente e escalável.
+
+## <a id="id12"> Amazon S3 Glacier</a>
+[INÍCIO](#id99)
+
+O [Amazon S3 Glacier](https://aws.amazon.com/pt/s3/storage-classes/glacier/) é um serviço projetado para armazenar dados que são raramente acessados e podem ser arquivados por um longo período, oferecendo uma solução econômica para retenção de dados a longo prazo e conformidade regulatória.
+
+Principais características e conceitos do Amazon S3 Glacier:
+
+**Arquivamento de Longo Prazo:** O S3 Glacier é ideal para armazenar dados que precisam ser retidos por um longo período, como registros históricos, backups, arquivos de auditoria, dados regulatórios e similares.
+
+**Acesso Ocasional:** O acesso a dados armazenados no S3 Glacier é projetado para ser ocasional e não imediato. Isso significa que a recuperação de dados pode levar algumas horas, o que o torna adequado para cenários onde o acesso imediato não é uma prioridade.
+
+**Políticas de Retenção:** Você pode criar políticas de retenção que definem quanto tempo os dados devem ser mantidos no S3 Glacier. Isso ajuda a cumprir requisitos regulatórios e a garantir que os dados sejam mantidos pelo tempo necessário
+
+**Preços Econômicos:** O S3 Glacier é uma opção econômica para armazenar grandes volumes de dados que raramente são acessados. No entanto, lembre-se de que as taxas de recuperação de dados podem variar com base na opção de recuperação selecionada.
+
+<details>
+  <summary><strong><h4>Perguntas Frequentes</h4></strong></summary>
+  
+1. **Como escolher entre o Amazon S3 Glacier e o Amazon Simple Storage Service (Amazon S3)?**
+
+O Amazon S3 é um serviço de armazenamento durável, seguro, simples e rápido, projetado para facilitar a computação de escala da Web para desenvolvedores. Use o Amazon S3 se precisar de baixa latência ou acesso frequente aos dados. Use o Amazon S3 Glacier caso o armazenamento de baixo custo seja primordial e não seja necessário acessar os dados em milissegundos.
+
+2. **O que a Amazon faz com meus dados no Amazon S3 Glacier?**
+
+A Amazon armazenará os dados e controlará o uso associado para efeitos de cobrança. A Amazon não acessará seus dados para nenhuma outra finalidade, fora da oferta do Amazon S3 Glacier, exceto quando exigido por lei.
+
+3. **Qual a resiliência do Amazon S3 Glacier?**
+
+O Amazon S3 Glacier foi projetado para fornecer durabilidade anual média de 99,999999999% para um arquivo.
+
+4. **Qual a confiabilidade do Amazon S3 Glacier?**
+
+O Amazon S3 Glacier foi projetado para proporcionar disponibilidade de 99,99%.
+
+5. **O que é o S3 Glacier Deep Archive?**
+
+O S3 Glacier Deep Archive é uma nova classe de armazenamento do Amazon S3 que oferece armazenamento de objetos seguro e resiliente para retenção de dados de longo prazo, acessados uma ou duas vezes por ano.
+
+6. **Como será cobrada a exclusão de dados com menos de 3 meses?**
+
+O Amazon S3 Glacier foi projetado para casos de uso em que os dados são retidos por meses, anos ou décadas. A exclusão de dados do Amazon S3 Glacier é gratuita se o arquivo excluído estiver armazenado a pelo menos três meses. Se o arquivo for excluído antes dos três meses após o upload, será cobrada uma tarifa de exclusão antecipada.
+
+7. **Como posso recuperar os dados do serviço?**
+
+Quando você faz uma solicitação para recuperar dados do S3 Glacier, inicia um trabalho de recuperação para um arquivo. Depois que o trabalho de recuperação for concluído, seus dados estarão disponíveis para download ou acesso por 24 horas.
+
+</details>
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon S3 Glacier é útil para organizações que precisam arquivar e reter dados a longo prazo por razões de conformidade, regulamentação ou histórico. Embora a recuperação de dados possa levar algum tempo, o serviço oferece uma maneira eficiente e econômica de manter dados valiosos ao longo do tempo sem ocupar espaço em armazenamento ativo mais caro.
