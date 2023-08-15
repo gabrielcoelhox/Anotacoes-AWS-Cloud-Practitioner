@@ -610,7 +610,7 @@ Principais características e conceitos do Amazon EFS:
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon EFS é particularmente útil em cenários onde várias instâncias EC2 precisam compartilhar dados, como aplicativos de conteúdo, análise de dados distribuída, processamento de lotes e muito mais. Ele simplifica o gerenciamento de armazenamento compartilhado, eliminando a necessidade de configurar servidores de arquivos dedicados e permitindo que as instâncias acessem dados de maneira eficiente e escalável.
 
-## <a id="id12"> Amazon S3 Glacier</a>
+## <a id="id13"> Amazon S3 Glacier</a>
 [INÍCIO](#id99)
 
 O [Amazon S3 Glacier](https://aws.amazon.com/pt/s3/storage-classes/glacier/) é um serviço projetado para armazenar dados que são raramente acessados e podem ser arquivados por um longo período, oferecendo uma solução econômica para retenção de dados a longo prazo e conformidade regulatória.
@@ -660,7 +660,7 @@ Quando você faz uma solicitação para recuperar dados do S3 Glacier, inicia um
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon S3 Glacier é útil para organizações que precisam arquivar e reter dados a longo prazo por razões de conformidade, regulamentação ou histórico. Embora a recuperação de dados possa levar algum tempo, o serviço oferece uma maneira eficiente e econômica de manter dados valiosos ao longo do tempo sem ocupar espaço em armazenamento ativo mais caro.
 
-## <a id="id13"> AWS Snow Family</a>
+## <a id="id14"> AWS Snow Family</a>
 [INÍCIO](#id99)
 
 A [família AWS Snow](https://aws.amazon.com/pt/snow/) é uma série de dispositivos físicos oferecidos pela AWS que permitem transferir grandes volumes de dados para e da nuvem de maneira eficiente, especialmente em situações em que a transferência pela internet não é prática devido a limitações de largura de banda, segurança ou outras considerações.
@@ -679,3 +679,28 @@ Existem vários dispositivos na família AWS Snow:
 **AWS Snowmobile:** O Snowmobile é uma opção para transferências de dados em larga escala que envolve literalmente um caminhão. É um contêiner móvel que pode transportar até 100 petabytes de dados. Ele é entregue no local, os dados são transferidos diretamente para o Snowmobile e depois transportados de volta para um data center da AWS.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ Esses dispositivos são projetados para permitir que as organizações superem desafios relacionados à transferência de grandes volumes de dados para a nuvem, especialmente quando a largura de banda da internet não é suficiente ou quando a segurança é uma preocupação. Eles oferecem uma maneira eficiente e segura de mover dados para a nuvem AWS, permitindo que as empresas aproveitem os benefícios da computação em nuvem sem as limitações da transferência convencional de dados pela internet.
+
+## <a id="id15"> AWS VPC</a>
+[INÍCIO](#id99)
+
+O [Amazon Virtual Private Cloud (VPC)](https://aws.amazon.com/pt/vpc/) é um serviço que permite criar redes isoladas logicamente na nuvem. Com o VPC, você pode criar uam rede virtual personalizada que permite customização e execução recusos, em um ambiente com controle total.
+
+![aws-vpc](Images/aws-vpc.png)
+
+Principais conceitos e recursos do Amazon VPC:
+
+**Rede Isolada:** O Amazon VPC permite criar uma rede isolada na nuvem, onde você tem controle total sobre a topologia de rede, endereços IP, tabelas de roteamento e configurações de segurança.
+
+**Subnets:** Dentro de um VPC, você pode criar subnets, que são segmentos de endereços IP que podem ser usados para isolar recursos. As subnets podem ser públicas ou privadas.
+
+**Endereços IP:** Você pode escolher os intervalos de endereços IP para suas subnets dentro do VPC. Isso permite que você projete a topologia da rede de acordo com suas necessidades.
+
+**Internet Gateway:** Para permitir que instâncias em subnets públicas acessem a internet, você pode associar um Internet Gateway ao seu VPC.
+
+**Elastic IP:** Os endereços IP elásticos podem ser usados para fornecer um IP estático para instâncias EC2, permitindo que elas mantenham o mesmo endereço IP mesmo após paradas e reinicializações.
+
+**NAT Gateway/NAT Instance:** Para permitir que instâncias em subnets privadas acessem a internet para atualizações ou downloads, você pode usar um NAT Gateway ou uma instância NAT.
+
+**Peering de VPC:** O VPC Peering permite conectar dois VPCs, permitindo que as instâncias nos VPCs se comuniquem diretamente entre si usando endereços IP internos.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon VPC é um serviço que permite criar redes privadas virtuais isoladas na nuvem. Com o VPC, você pode definir sua própria topologia de rede, segmentar recursos em sub-redes públicas e privadas, e controlar a conectividade e a segurança. Isso proporciona uma infraestrutura altamente flexível, semelhante a redes tradicionais de data centers, enquanto aproveita os benefícios da escalabilidade e dos serviços da AWS. Em resumo, o AWS VPC é a base para construir ambientes de nuvem personalizados e seguros, adaptados às necessidades específicas de cada aplicativo ou serviço.
