@@ -704,3 +704,33 @@ Principais conceitos e recursos do Amazon VPC:
 **Peering de VPC:** O VPC Peering permite conectar dois VPCs, permitindo que as instâncias nos VPCs se comuniquem diretamente entre si usando endereços IP internos.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon VPC é um serviço que permite criar redes privadas virtuais isoladas na nuvem. Com o VPC, você pode definir sua própria topologia de rede, segmentar recursos em sub-redes públicas e privadas, e controlar a conectividade e a segurança. Isso proporciona uma infraestrutura altamente flexível, semelhante a redes tradicionais de data centers, enquanto aproveita os benefícios da escalabilidade e dos serviços da AWS. Em resumo, o AWS VPC é a base para construir ambientes de nuvem personalizados e seguros, adaptados às necessidades específicas de cada aplicativo ou serviço.
+
+## <a id="id16"> AWS Route 53</a>
+[INÍCIO](#id99)
+
+O [Amazon Route 53](https://aws.amazon.com/pt/route53/) é um serviço para gerenciar os Nomes de Domínio (DNS) altamente escalável e altamente disponível. Ele é projetado para gerenciar registros DNS e direcionar o tráfego de internet para recursos, como aplicativos web, serviços de balanceamento de carga, buckets do Amazon S3 e outros recursos da AWS.
+
+![route53](Images/route53.png)
+
+Principais características e conceitos do Amazon Route 53:
+
+**Gerenciamento de DNS:** O Route 53 permite que você gerencie os registros DNS associados a esses domínios. Além disso, permite converter, por exemplo, nome de "google.com.br" para seu endereço IP "216.239.38.120"
+
+**Resolução DNS:** O Route 53 fornece resolução DNS global, o que significa que ele traduz nomes de domínio em endereços IP para permitir que os usuários acessem recursos na Internet.
+
+| <div align="center">URL</div> | <div align="center">IP | <div align="center">REGISTRO</div> | <div align="center">TIPO</div>|
+| --- | --- | --- | --- |
+| <div align="center">www.google.com</div> | <div align="center">216.239.38.120</div> | <div align="center">A</div> | <div align="center">IPv4</div> |
+| <div align="center">www.google.com</div> | <div align="center">0:0:0:0:0:ffff:d8ef:2678</div> | <div align="center">AAAA</div> | <div align="center">IPv6</div> |
+| <div align="center">search.google.com</div> | <div align="center">www.google.com</div> | <div align="center">CNAME</div> | <div align="center">Hostname para Hostname</div> |
+| <div align="center">exemple.com</div> | <div align="center">Recurso AWS</div> | <div align="center">ALIAS</div> | <div align="center">ELB, CloudFront, S3, RDS ...</div> |
+
+**Redirecionamento de Tráfego:** O Route 53 permite criar registros DNS de forma que você possa direcionar o tráfego de entrada para diferentes destinos com base em regras, como rotas geográficas, balanceamento de carga, disponibilidade e latência.
+
+**Registros de Saúde e Disponibilidade:** O Route 53 oferece verificações de saúde para monitorar a disponibilidade de seus recursos, como servidores web, e redireciona o tráfego para locais alternativos caso um recurso falhe.
+
+**Balanceamento de Carga:** O Route 53 suporta balanceamento de carga para distribuir automaticamente o tráfego entre várias instâncias ou pontos de extremidade, melhorando a disponibilidade e o desempenho de suas aplicações.
+
+**Registro de Domínio:** O Route 53 também oferece um serviço de registro de domínio, permitindo que você registre e gerencie domínios diretamente por meio do console da AWS.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon Route 53 é um serviço de Sistema de Nomes de Domínio (DNS) que permite registrar nomes de domínio, gerenciar registros DNS e direcionar o tráfego de internet para recursos online, como sites, aplicativos e servidores. Ele oferece resolução DNS global, redirecionamento de tráfego baseado em regras, monitoramento de disponibilidade, balanceamento de carga e suporte para registros DNS privados. O Route 53 é uma ferramenta essencial para garantir que os usuários possam acessar seus recursos online de forma confiável e eficiente, além de melhorar a disponibilidade e o desempenho de suas aplicações na nuvem da AWS.
