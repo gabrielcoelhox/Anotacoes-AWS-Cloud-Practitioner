@@ -734,3 +734,26 @@ Principais características e conceitos do Amazon Route 53:
 **Registro de Domínio:** O Route 53 também oferece um serviço de registro de domínio, permitindo que você registre e gerencie domínios diretamente por meio do console da AWS.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon Route 53 é um serviço de Sistema de Nomes de Domínio (DNS) que permite registrar nomes de domínio, gerenciar registros DNS e direcionar o tráfego de internet para recursos online, como sites, aplicativos e servidores. Ele oferece resolução DNS global, redirecionamento de tráfego baseado em regras, monitoramento de disponibilidade, balanceamento de carga e suporte para registros DNS privados. O Route 53 é uma ferramenta essencial para garantir que os usuários possam acessar seus recursos online de forma confiável e eficiente, além de melhorar a disponibilidade e o desempenho de suas aplicações na nuvem da AWS.
+
+## <a id="id17"> Amazon CloudFront</a>
+[INÍCIO](#id99)
+
+O [Amazon CloudFront](https://aws.amazon.com/pt/cloudfront/) é um serviço de Content Delivery Network (CDN) projetado para melhorar a entrega de conteúdo online, como imagens, vídeos, páginas da web e outros ativos, aos usuários finais com baixa latência e alta velocidade. O CloudFront distribui o conteúdo por uma rede global de servidores distribuídos estrategicamente, chamados de "edge locations". (Ver tópico Infraestrutura Global AWS).
+
+![CloudFront](Images/cloudfront.png)
+
+Principais características e conceitos do Amazon CloudFront:
+
+**Distribuição Global de Conteúdo:** O CloudFront possui dezenas de edge locations em todo o mundo, permitindo que o conteúdo seja armazenado fisicamente mais próximo dos usuários finais, reduzindo a latência e melhorando o tempo de resposta.
+
+**Cache de Conteúdo:** O CloudFront armazena em cache o conteúdo em suas edge locations, o que permite que o mesmo seja entregue mais rapidamente a usuários subsequentes que solicitem o mesmo conteúdo.
+
+**Distribuição de Conteúdo Segura:** O CloudFront oferece recursos de segurança, como a possibilidade de usar certificados SSL/TLS para criptografar a comunicação entre os usuários e o serviço, garantindo que o conteúdo seja entregue de forma segura.
+
+**Streaming de Mídia:** O CloudFront suporta a distribuição de streaming de áudio e vídeo, permitindo que você entregue conteúdo de mídia de alta qualidade em tempo real.
+
+**Personalização e Compressão de Conteúdo:** O CloudFront permite personalizar como o conteúdo é entregue, incluindo a capacidade de comprimir automaticamente arquivos para reduzir o tamanho e melhorar o desempenho.
+
+O Amazon CloudFront é usado para acelerar a entrega de conteúdo da web a nível global, melhorar a experiência do usuário final, reduzir a carga em servidores de origem e garantir a segurança da entrega de conteúdo. Ele é especialmente útil para sites e aplicativos que desejam oferecer um desempenho rápido e confiável para usuários em todo o mundo.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon CloudFront é um serviço de Content Delivery Network (CDN) da Amazon Web Services (AWS) que melhora a entrega de conteúdo online aos usuários finais, garantindo baixa latência e alta velocidade. Ele utiliza uma rede global de servidores distribuídos (edge locations) para armazenar e entregar conteúdo, como imagens, vídeos e páginas da web, de forma eficiente. O CloudFront oferece cache de conteúdo, distribuição segura, personalização, compressão e integração com outros serviços AWS para acelerar a entrega de conteúdo de maneira confiável e segura. É uma ferramenta essencial para otimizar o desempenho de sites e aplicativos, garantindo uma experiência de usuário rápida e consistente em todo o mundo.
