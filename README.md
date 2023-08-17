@@ -1,5 +1,5 @@
 # <p align="center"> <a id="id99"> :cloud: AWS Cloud Practitioner :cloud: </p>
-<p align="center"> 💻 Atualizado em 07 de Agosto de 2023 💻</p>
+<p align="center"> 💻 Atualizado em 17 de Agosto de 2023 💻</p>
 
 Repositório destinado a anotações de estudo para a prova de certificação **AWS Cloud Practitioner (CLF-C01)**.
 
@@ -757,3 +757,41 @@ Principais características e conceitos do Amazon CloudFront:
 O Amazon CloudFront é usado para acelerar a entrega de conteúdo da web a nível global, melhorar a experiência do usuário final, reduzir a carga em servidores de origem e garantir a segurança da entrega de conteúdo. Ele é especialmente útil para sites e aplicativos que desejam oferecer um desempenho rápido e confiável para usuários em todo o mundo.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon CloudFront é um serviço de Content Delivery Network (CDN) da Amazon Web Services (AWS) que melhora a entrega de conteúdo online aos usuários finais, garantindo baixa latência e alta velocidade. Ele utiliza uma rede global de servidores distribuídos (edge locations) para armazenar e entregar conteúdo, como imagens, vídeos e páginas da web, de forma eficiente. O CloudFront oferece cache de conteúdo, distribuição segura, personalização, compressão e integração com outros serviços AWS para acelerar a entrega de conteúdo de maneira confiável e segura. É uma ferramenta essencial para otimizar o desempenho de sites e aplicativos, garantindo uma experiência de usuário rápida e consistente em todo o mundo.
+
+## <a id="id18"> Elastic Load Balancing</a>
+[INÍCIO](#id99)
+
+O [Elastic Load Balancing (ELB)](https://aws.amazon.com/pt/elasticloadbalancing/) é um serviço que distribui automaticamente o tráfego de entrada para instâncias de Amazon EC2, contêineres, endereços IP ou zonas de disponibilidade para otimizar a disponibilidade e a escalabilidade de aplicações e serviços. O ELB ajuda a garantir que o tráfego seja distribuído de forma equilibrada entre os recursos subjacentes, melhorando a disponibilidade, a tolerância a falhas e o desempenho.
+
+Existem três tipos principais de Elastic Load Balancers na AWS:
+
+1. **Application Load Balancer (ALB):**
+
+- Projetado para distribuir o tráfego de aplicativos baseados na web para várias instâncias EC2 ou contêineres.
+- Oferece suporte a regras de roteamento baseadas em URL, roteamento por hostname e redirecionamentos.
+- Permite usar o roteamento baseado em conteúdo, como o encaminhamento de tráfego para diferentes grupos de destino com base no conteúdo da solicitação.
+
+2. **Network Load Balancer (NLB):**
+
+- Projetado para tráfego TCP, UDP e TLS de alto desempenho.
+- Distribui o tráfego de entrada para instâncias EC2 ou endereços IP internos em nível de porta, mantendo alta capacidade e baixa latência.
+- Ideal para aplicativos que exigem alta performance e escalabilidade.
+
+3. **Classic Load Balancer:**
+
+- A versão anterior do ELB que oferece distribuição de tráfego para instâncias EC2 usando os protocolos HTTP, HTTPS, TCP e SSL.
+- Oferece recursos de balanceamento de carga básicos, mas está sendo gradualmente substituída pelo ALB e NLB.
+
+Principais recursos do Elastic Load Balancer:
+
+**Balanceamento de Carga:** O ELB distribui automaticamente o tráfego de entrada entre várias instâncias EC2, contêineres ou outros recursos, melhorando o desempenho e a disponibilidade.
+
+**Escalabilidade:** O ELB ajuda a escalar sua aplicação de maneira eficaz, adicionando ou removendo instâncias conforme necessário.
+
+**Detecção de Saúde:** O ELB monitora a saúde das instâncias de destino, direcionando o tráfego somente para instâncias saudáveis.
+
+**Zonas de Disponibilidade:** O ELB pode distribuir o tráfego por várias zonas de disponibilidade para garantir alta disponibilidade e redundância.
+
+**SSL/TLS:** O ELB suporta terminação de SSL/TLS, permitindo que o tráfego criptografado seja descriptografado no load balancer e recriptografado antes de ser encaminhado para as instâncias de destino.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Elastic Load Balancer (ELB) é um serviço que fornece balanceamento de carga automatizado e distribuição de tráfego para recursos como instâncias EC2, contêineres e endereços IP. O ELB ajuda a otimizar a disponibilidade e a escalabilidade de aplicações ao distribuir o tráfego de entrada de maneira uniforme entre diferentes recursos, garantindo melhor desempenho e confiabilidade. Existem três tipos de ELBs: Application Load Balancer (ALB) para aplicativos web, Network Load Balancer (NLB) para tráfego de rede de alto desempenho e Classic Load Balancer. O ELB monitora a saúde dos recursos, detectando e redirecionando o tráfego de acordo com as condições, melhorando a disponibilidade e a capacidade de resposta. É uma ferramenta essencial para criar arquiteturas escaláveis e resilientes em ambientes de nuvem da AWS.
