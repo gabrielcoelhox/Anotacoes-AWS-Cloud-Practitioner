@@ -795,3 +795,26 @@ Principais recursos do Elastic Load Balancer:
 **SSL/TLS:** O ELB suporta terminação de SSL/TLS, permitindo que o tráfego criptografado seja descriptografado no load balancer e recriptografado antes de ser encaminhado para as instâncias de destino.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Elastic Load Balancer (ELB) é um serviço que fornece balanceamento de carga automatizado e distribuição de tráfego para recursos como instâncias EC2, contêineres e endereços IP. O ELB ajuda a otimizar a disponibilidade e a escalabilidade de aplicações ao distribuir o tráfego de entrada de maneira uniforme entre diferentes recursos, garantindo melhor desempenho e confiabilidade. Existem três tipos de ELBs: Application Load Balancer (ALB) para aplicativos web, Network Load Balancer (NLB) para tráfego de rede de alto desempenho e Classic Load Balancer. O ELB monitora a saúde dos recursos, detectando e redirecionando o tráfego de acordo com as condições, melhorando a disponibilidade e a capacidade de resposta. É uma ferramenta essencial para criar arquiteturas escaláveis e resilientes em ambientes de nuvem da AWS.
+
+## <a id="id19">Amazon RDS</a>
+[INÍCIO](#id99)
+
+O [Amazon Relational Database Service (RDS)](https://aws.amazon.com/pt/rds/) é um serviço de banco de dados que facilita a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem. Ele automatiza tarefas administrativas complexas, como provisionamento de hardware, configuração de software, backup, recuperação e dimensionamento, permitindo que você se concentre mais na aplicação e menos na administração do banco de dados.
+
+Principais características e conceitos do Amazon RDS:
+
+**Bancos de Dados Suportados:** O Amazon RDS oferece suporte a diversos sistemas de gerenciamento de banco de dados populares, como MySQL, PostgreSQL, MariaDB, Oracle, Microsoft SQL Server e Amazon Aurora.
+
+**Backup e Recuperação Automatizados:** O RDS automatiza backups regulares, permitindo que você restaure bancos de dados para pontos no tempo específicos. Também oferece a capacidade de criar snapshots manuais para proteção adicional.
+
+**Alta Disponibilidade:** O Amazon RDS oferece recursos de replicação e failover automatizado para garantir alta disponibilidade dos bancos de dados.
+
+**Escalabilidade:** Você pode dimensionar verticalmente (aumentar o tamanho da instância) ou horizontalmente (usar leitura réplicas) de acordo com as necessidades de desempenho.
+
+**Segurança:** O RDS oferece recursos de segurança, como a possibilidade de criptografar dados em repouso e em trânsito usando SSL.
+
+**Monitoramento e Métricas:** O RDS fornece métricas de desempenho e monitoramento de recursos, permitindo que você acompanhe a saúde do banco de dados.
+
+**Atualizações de Patch e Manutenção:** O RDS automatiza atualizações de patch e manutenção, garantindo que seus bancos de dados estejam atualizados e seguros.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon RDS é uma solução conveniente para empresas que desejam hospedar e gerenciar bancos de dados relacionais na nuvem sem se preocupar com a complexidade da administração do banco de dados. Ele oferece uma maneira eficaz de dimensionar, proteger e manter bancos de dados, permitindo que os desenvolvedores se concentrem na construção de aplicativos em vez de se preocuparem com tarefas administrativas.
