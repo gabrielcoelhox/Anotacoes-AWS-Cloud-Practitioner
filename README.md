@@ -831,3 +831,53 @@ $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon RDS é uma solução conveniente
 ![DynamoDB](Images/DynamoDB.png)
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon DynamoDB é uma escolha poderosa para aplicativos que requerem escalabilidade rápida, baixa latência e flexibilidade de esquema. Sua natureza totalmente gerenciada remove a necessidade de preocupações operacionais, permitindo que os desenvolvedores se concentrem na criação de aplicativos inovadores.
+
+## <a id="id21">Amazon ElastiCache</a>
+[INÍCIO](#id99)
+
+O [Amazon ElastiCache]() é um serviço de cache gerenciado pela AWS que melhora a performance de aplicativos ao armazenar dados frequentemente acessados em memória cache. O ElastiCache suporta dois dos sistemas de cache mais populares: o Memcached e o Redis. Ele reduz a carga em bancos de dados e servidores, aumentando a velocidade de recuperação de dados e melhorando a escalabilidade e a eficiência das aplicações.
+
+![elasticache](Images/elasticache.png)
+
+**<h4>Memcached:</h4>**
+
+**Modelo de Dados:** O Memcached é um sistema de cache distribuído que armazena pares chave-valor em memória.
+
+**Estruturas de Dados:** Oferece suporte a tipos de dados simples, como strings, números inteiros e booleanos.
+
+**Persistência:** O Memcached não oferece suporte à persistência nativa em disco, o que significa que os dados são voláteis e podem ser perdidos em caso de reinicialização do serviço ou falha.
+
+**Recursos Avançados:** O Memcached é projetado para caching rápido e simples. Não possui recursos avançados, como ordenação ou busca por índices.
+
+**Casos de Uso:** É ideal para caching de dados simples, como objetos serializados, HTML cacheado ou dados temporários que podem ser regenerados a partir da fonte.
+
+**<h4>Redis:</h4>**
+
+**Modelo de Dados:** O Redis é um armazenamento em cache em memória que suporta diversos tipos de dados, incluindo strings, listas, conjuntos, hashes e muito mais.
+
+**Estruturas de Dados:** Oferece uma variedade de estruturas de dados complexas, como listas ordenadas, conjuntos ordenados, bitmaps e hiperloglogs.
+
+**Persistência:** O Redis suporta persistência em disco, permitindo que os dados sejam armazenados permanentemente. Também oferece opções de replicação e alta disponibilidade.
+
+**Recursos Avançados:** O Redis possui recursos avançados, como operações atômicas em múltiplas estruturas de dados, suporte a scripts Lua, pub/sub (publicação/assinatura) e armazenamento de chaves com tempo de expiração.
+
+**Escalabilidade:** Enquanto o Redis também é escalável, ele pode ter algumas limitações em comparação com o Memcached para cargas de trabalho com altíssimo volume de leitura e gravação.
+
+**Casos de Uso:** O Redis é ideal para caching de dados complexos, armazenamento temporário de sessões, armazenamento de dados estruturados, contagem de métricas e análise de dados em tempo real.
+
+|  | <div align="center">Memcached | <div align="center">Redis</div> |
+| --- | --- | --- |
+| <div align="center">Sub-milisecond latency</div> | <div align="center">Yes</div> | <div align="center">Yes</div> |
+| <div align="center">Developer ease of use</div> | <div align="center">Yes</div> | <div align="center">Yes</div> |
+| <div align="center">Data partitioning</div> | <div align="center">Yes</div> | <div align="center">Yes</div> |
+| <div align="center">Support for a broad set of programming languages</div> | <div align="center">Yes</div> | <div align="center">Yes</div> |
+| <div align="center">Advanced data structures</div> | <div align="center">-</div> | <div align="center">Yes</div> |
+| <div align="center">Multithreaded architecture</div> | <div align="center">Yes</div> | <div align="center">-</div> |
+| <div align="center">Snapshots</div> | <div align="center">-</div> | <div align="center">Yes</div> |
+| <div align="center">Replication</div> | <div align="center">-</div> | <div align="center">Yes</div> |
+| <div align="center">Transactions</div> | <div align="center">-</div> | <div align="center">Yes</div> |
+| <div align="center">Pub/Sub</div> | <div align="center">-</div> | <div align="center">Yes</div> |
+| <div align="center">Lua scripting</div> | <div align="center">-</div> | <div align="center">Yes</div> |
+| <div align="center">Geospatial support</div> | <div align="center">-</div> | <div align="center">Yes</div> |
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon ElastiCache é um serviço de armazenamento em cache gerenciado oferecido pela Amazon Web Services (AWS). Ele é projetado para melhorar o desempenho de aplicativos ao armazenar dados frequentemente acessados em memória cache. O ElastiCache suporta dois sistemas de cache populares, Memcached e Redis. Ao armazenar dados em memória, o serviço oferece acesso rápido e eficiente a dados, reduzindo a carga em bancos de dados e acelerando o tempo de resposta das aplicações. Com escalabilidade automática, failover automático e recursos de segurança, o ElastiCache é uma escolha poderosa para melhorar o desempenho e a escalabilidade de aplicações que requerem acesso rápido a dados.
