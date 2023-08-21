@@ -1,5 +1,5 @@
 # <p align="center"> <a id="id99"> :cloud: AWS Cloud Practitioner :cloud: </p>
-<p align="center"> 💻 Atualizado em 17 de Agosto de 2023 💻</p>
+<p align="center"> 💻 Atualizado em 21 de Agosto de 2023 💻</p>
 
 Repositório destinado a anotações de estudo para a prova de certificação **AWS Cloud Practitioner (CLF-C01)**.
 
@@ -818,3 +818,16 @@ Principais características e conceitos do Amazon RDS:
 **Atualizações de Patch e Manutenção:** O RDS automatiza atualizações de patch e manutenção, garantindo que seus bancos de dados estejam atualizados e seguros.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon RDS é uma solução conveniente para empresas que desejam hospedar e gerenciar bancos de dados relacionais na nuvem sem se preocupar com a complexidade da administração do banco de dados. Ele oferece uma maneira eficaz de dimensionar, proteger e manter bancos de dados, permitindo que os desenvolvedores se concentrem na construção de aplicativos em vez de se preocuparem com tarefas administrativas.
+
+## <a id="id20">Amazon DynamoDB</a>
+[INÍCIO](#id99)
+
+- O [Amazon DynamoDB](https://aws.amazon.com/pt/dynamodb/) é um serviço de banco de dados NoSQL totalmente gerenciado fornecido pela AWS. Ele é projetado para fornecer armazenamento de dados rápido, escalável e de baixa latência para aplicações que requerem acesso a dados de alta velocidade. 
+
+- O DynamoDB é projetado para lidar com cargas de trabalho dinâmicas e escaláveis, sem a necessidade de provisionamento manual ou configuração de dimensionamento. Ele é especialmente adequado para aplicações em tempo real, móveis e da web que exigem flexibilidade de esquema e desempenho consistente. 
+
+- O serviço oferece modelos de consistência configuráveis, escalabilidade automática, backup e recuperação automatizados, segurança robusta e integração perfeita com outros serviços AWS, tornando-o uma escolha poderosa para aplicativos modernos e de alto desempenho.
+
+![DynamoDB](Images/DynamoDB.png)
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon DynamoDB é uma escolha poderosa para aplicativos que requerem escalabilidade rápida, baixa latência e flexibilidade de esquema. Sua natureza totalmente gerenciada remove a necessidade de preocupações operacionais, permitindo que os desenvolvedores se concentrem na criação de aplicativos inovadores.
