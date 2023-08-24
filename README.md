@@ -904,3 +904,22 @@ Principais características e conceitos do Amazon CloudWatch:
 **Monitoramento de Aplicações:** O CloudWatch Application Insights permite monitorar aplicações em execução em várias camadas, fornecendo insights sobre problemas de desempenho e disponibilidade.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon CloudWatch é um serviço de monitoramento e observabilidade que permite monitorar recursos e aplicativos na nuvem. Ele coleta e exibe métricas, logs e eventos para fornecer insights sobre o desempenho, a disponibilidade e a eficiência de sistemas e aplicações na AWS. O CloudWatch ajuda a identificar problemas, otimizar recursos e tomar ações proativas para garantir que a infraestrutura e os aplicativos estejam operando de maneira eficaz. Com recursos como alarmes, dashboards personalizados, integração com outros serviços AWS e monitoramento de aplicativos, o CloudWatch é uma ferramenta essencial para monitorar e garantir o sucesso das operações em ambientes de nuvem.
+
+## <a id="id23">Amazon CloudTrail</a>
+[INÍCIO](#id99)
+
+O [Amazon CloudTrail](https://aws.amazon.com/pt/cloudtrail/) é um serviço que permite o monitoramento e registro das atividades realizadas em sua conta da AWS. Ele captura eventos e registros de ações realizadas através da Console de Gerenciamento da AWS, da AWS Command Line Interface (CLI) e de chamadas de API, fornecendo um registro detalhado das ações tomadas em sua infraestrutura em nuvem.
+
+Principais características e conceitos do Amazon CloudTrail:
+
+**Registro de Eventos:** O CloudTrail captura eventos e atividades em sua conta AWS, incluindo criação, modificação e exclusão de recursos, acesso a serviços, autenticação de usuários, entre outros.
+
+**Armazenamento de Logs:** Os logs do CloudTrail são armazenados no Amazon S3, permitindo o armazenamento durável e seguro de registros de eventos.
+
+**Registro de Dados Sensíveis:** O CloudTrail registra detalhes como endereços IP, identificadores de usuários e conteúdo das solicitações, ajudando na análise de eventos e na resolução de problemas de segurança.
+
+**Detecção de Anomalias:** Ao analisar os logs do CloudTrail, é possível identificar padrões e comportamentos anômalos, o que pode indicar atividades maliciosas ou problemas operacionais.
+
+**Conformidade e Auditoria:** Os registros do CloudTrail são úteis para fins de auditoria e conformidade, permitindo que você acompanhe quem fez o quê e quando.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon CloudTrail é um serviço que oferece monitoramento e registro detalhado das atividades em sua conta da AWS. Ele captura eventos e registros de ações realizadas por meio da Console de Gerenciamento da AWS, CLI e chamadas de API, fornecendo um histórico completo de atividades em sua infraestrutura na nuvem. Esses registros são armazenados no Amazon S3 e podem ser usados para auditoria, conformidade, segurança e análise de eventos. O CloudTrail permite rastrear quem fez o quê e quando, ajudando a identificar atividades suspeitas ou indesejadas, além de facilitar a detecção de anomalias e a resolução de problemas de segurança e operacionais.
