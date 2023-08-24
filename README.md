@@ -923,3 +923,15 @@ Principais características e conceitos do Amazon CloudTrail:
 **Conformidade e Auditoria:** Os registros do CloudTrail são úteis para fins de auditoria e conformidade, permitindo que você acompanhe quem fez o quê e quando.
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon CloudTrail é um serviço que oferece monitoramento e registro detalhado das atividades em sua conta da AWS. Ele captura eventos e registros de ações realizadas por meio da Console de Gerenciamento da AWS, CLI e chamadas de API, fornecendo um histórico completo de atividades em sua infraestrutura na nuvem. Esses registros são armazenados no Amazon S3 e podem ser usados para auditoria, conformidade, segurança e análise de eventos. O CloudTrail permite rastrear quem fez o quê e quando, ajudando a identificar atividades suspeitas ou indesejadas, além de facilitar a detecção de anomalias e a resolução de problemas de segurança e operacionais.
+
+## <a id="id24">AWS Artifact</a>
+[INÍCIO](#id99)
+
+O [AWS Artifact](https://aws.amazon.com/pt/artifact/) é um serviço da Amazon Web Services (AWS) que fornece acesso a documentos de conformidade, acordos de segurança e relatórios de auditoria relacionados aos serviços da AWS. Ele reúne e disponibiliza esses documentos em um local centralizado, facilitando o atendimento a requisitos regulatórios, auditorias de segurança e a demonstração de conformidade aos padrões de segurança. O AWS Artifact ajuda as organizações a acessar, baixar e compartilhar os documentos necessários para manter práticas de segurança sólidas e cumprir as regulamentações aplicáveis.
+
+## <a id="id25">AWS CloudFormation</a>
+[INÍCIO](#id99)
+
+O [AWS CloudFormation](https://aws.amazon.com/pt/cloudformation/) é um serviço  que permite criar e gerenciar recursos de infraestrutura na nuvem usando definições de código. Ele utiliza templates de infraestrutura como código para automatizar a criação, atualização e exclusão de recursos, possibilitando a implantação consistente e repetível de ambientes complexos. Com o CloudFormation, você pode criar "stacks" que contêm recursos inter-relacionados, orquestrando a infraestrutura de maneira eficiente. Isso ajuda a automatizar tarefas de configuração, reduzir erros humanos, melhorar a rastreabilidade e permitir a escalabilidade na criação de ambientes na nuvem.
+
+![CloudFormation](Images/cloudformation.png)
