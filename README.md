@@ -1,5 +1,5 @@
 # <p align="center"> <a id="id99"> :cloud: AWS Cloud Practitioner :cloud: </p>
-<p align="center"> 💻 Atualizado em 21 de Agosto de 2023 💻</p>
+<p align="center"> 💻 Atualizado em 24 de Agosto de 2023 💻</p>
 
 Repositório destinado a anotações de estudo para a prova de certificação **AWS Cloud Practitioner (CLF-C01)**.
 
@@ -881,3 +881,26 @@ O [Amazon ElastiCache]() é um serviço de cache gerenciado pela AWS que melhora
 | <div align="center">Geospatial support</div> | <div align="center">-</div> | <div align="center">Yes</div> |
 
 $\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon ElastiCache é um serviço de armazenamento em cache gerenciado oferecido pela Amazon Web Services (AWS). Ele é projetado para melhorar o desempenho de aplicativos ao armazenar dados frequentemente acessados em memória cache. O ElastiCache suporta dois sistemas de cache populares, Memcached e Redis. Ao armazenar dados em memória, o serviço oferece acesso rápido e eficiente a dados, reduzindo a carga em bancos de dados e acelerando o tempo de resposta das aplicações. Com escalabilidade automática, failover automático e recursos de segurança, o ElastiCache é uma escolha poderosa para melhorar o desempenho e a escalabilidade de aplicações que requerem acesso rápido a dados.
+
+## <a id="id22">Amazon CloudWatch</a>
+[INÍCIO](#id99)
+
+O [Amazon CloudWatch](https://aws.amazon.com/pt/cloudwatch/) é um serviço de monitoramento de desempenho que permite monitorar recursos e aplicativos na nuvem, coletar dados de desempenho e operação e gerar insights úteis por meio de métricas, logs, eventos e dashboards. O CloudWatch ajuda a garantir o desempenho, a disponibilidade e a eficiência de aplicações e infraestrutura na nuvem.
+
+![cloudwatch1](Images/cloudwatch1.png)
+
+Principais características e conceitos do Amazon CloudWatch:
+
+**Métricas e Monitoramento:** O CloudWatch coleta métricas de recursos da AWS, como uso de CPU, utilização de armazenamento, tráfego de rede e muito mais. Ele exibe essas métricas em gráficos para monitoramento em tempo real e análise histórica.
+
+**Alarmes:** Você pode definir alarmes com base nas métricas do CloudWatch para receber notificações quando os limites definidos forem ultrapassados. Isso permite que você tome ações proativas em resposta a eventos críticos.
+
+**Logs:** O CloudWatch Logs permite coletar, monitorar e analisar registros de aplicativos e sistemas. Você pode pesquisar e filtrar logs, além de configurar alertas com base em padrões de log.
+
+**Eventos:** O CloudWatch Events monitora mudanças em recursos da AWS e dispara ações automáticas com base em eventos. Isso permite a automação de fluxos de trabalho e a reação a eventos em tempo real.
+
+**Dashboards Personalizados:** Você pode criar painéis de controle personalizados no CloudWatch para visualizar métricas e logs importantes em um único local.
+
+**Monitoramento de Aplicações:** O CloudWatch Application Insights permite monitorar aplicações em execução em várias camadas, fornecendo insights sobre problemas de desempenho e disponibilidade.
+
+$\textcolor{salmon}{\textsf{Resumo:}}$ O Amazon CloudWatch é um serviço de monitoramento e observabilidade que permite monitorar recursos e aplicativos na nuvem. Ele coleta e exibe métricas, logs e eventos para fornecer insights sobre o desempenho, a disponibilidade e a eficiência de sistemas e aplicações na AWS. O CloudWatch ajuda a identificar problemas, otimizar recursos e tomar ações proativas para garantir que a infraestrutura e os aplicativos estejam operando de maneira eficaz. Com recursos como alarmes, dashboards personalizados, integração com outros serviços AWS e monitoramento de aplicativos, o CloudWatch é uma ferramenta essencial para monitorar e garantir o sucesso das operações em ambientes de nuvem.
